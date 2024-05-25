@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Home
-    </ion-title>
+    <ion-title>SkeletonAPP</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,46 +16,52 @@
 
       <ion-card-title>
         <h3>Registro</h3>
-        <p>Usuario:{{usuarioRecibido}}</p>
+        <ion-chip>
+          <ion-avatar>
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+          <ion-label>{{usuarioRecibido}}</ion-label>
+        </ion-chip>
       </ion-card-title>
 
       <ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
 
-      <ion-item>
-        <ion-label position="floating" >Nombre</ion-label>
-        <ion-input type="text" [(ngModel)]="nombre" ></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="floating">Apellido</ion-label>
-        <ion-input type="text" [(ngModel)]="apellido"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Nivel de educacion</ion-label>
-        <ion-select [(ngModel)]="SelectedOption"> <!--Ver otros Atributos en librerias-->
-          <ion-select-option value="option1">Primaria</ion-select-option>
-          <ion-select-option value="option2">Secundaria</ion-select-option>
-          <ion-select-option value="option3">Universitaria</ion-select-option>
-        </ion-select>
-
         <ion-item>
-          <ion-label>Fecha de nacimiento</ion-label>
-          <ion-item>
-              <ion-input type="date" [(ngModel)]="SelectedDate"></ion-input>
-          </ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input #nombreInput type="text" [(ngModel)]="nombre"></ion-input>
         </ion-item>
 
-        
-      </ion-item>
+        <ion-item>
+          <ion-label position="floating">Apellido</ion-label>
+          <ion-input #apellidoInput type="text" [(ngModel)]="apellido"></ion-input>
+        </ion-item>
 
-    </ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
+        <ion-item>
+          <ion-label>Nivel de educacion</ion-label>
+          <ion-select [(ngModel)]="SelectedOption"> <!--Ver otros Atributos en librerias-->
+            <ion-select-option value="option1">Primaria</ion-select-option>
+            <ion-select-option value="option2">Secundaria</ion-select-option>
+            <ion-select-option value="option3">Universitaria</ion-select-option>
+          </ion-select>
+
+          <ion-item>
+            <ion-label>Fecha de nacimiento</ion-label>
+            <ion-item>
+              <ion-input type="date" [(ngModel)]="SelectedDate"></ion-input>
+            </ion-item>
+          </ion-item>
+
+
+        </ion-item>
+
+      </ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
 
 
       <!--Botones de accion-->
-      <ion-button expand="block" (click)="LimpiarDatos()">Limpiar</ion-button> <!--click es como se llama a la funcion creada en login.page.ts-->
+      <ion-button expand="block" (click)="LimpiarDatos()">Limpiar</ion-button><!--click es como se llama a la funcion creada en login.page.ts-->
+
       <ion-button expand="block" (click)="MostrarDatos()">Mostrar</ion-button>
-      
+
 
     </ion-card>
   </div>

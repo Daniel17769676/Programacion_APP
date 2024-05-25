@@ -12,6 +12,9 @@ export class LoginPage implements OnInit {
   usuario: string = "";
   password: string = "";
 
+  public progress = 0; // Variable para la barra de progreso
+  private intervalId: any; // Variable para almacenar el intervalo
+
   constructor(private alertController: AlertController, private router:Router) { }
 
   ngOnInit() {
@@ -19,7 +22,11 @@ export class LoginPage implements OnInit {
 
 
   login() {
-    if (this.usuario.trim() == 'daniel' && this.password.trim() == '1234') {
+
+    this.startProgress(); // Iniciar la barra de progreso al hacer login
+
+
+    if (this.usuario.trim() == 'Daniel' && this.password.trim() == '1234') {
       //this.presentAlert('Correcto'); Cambiamos esta funcion para que redireccione a la pagina home y lo hace con NavigationExtras
       let navigationExtras: NavigationExtras = {
         state: {
@@ -28,13 +35,21 @@ export class LoginPage implements OnInit {
         }
         
       }
+
+      setTimeout(() => {
+
+
       this.router.navigate(['/home'], navigationExtras);//Con esto se redirecciona a la pagina home
 
+    }, 5000); // Tiempo para la demostración de la barra de progre
 
 
     }
     else {
       this.presentAlert('Incorecto');
+
+      this.stopProgress(); // Detener la barra de progreso en caso de error
+
     }
 
 
@@ -51,5 +66,24 @@ export class LoginPage implements OnInit {
 
     await alert.present();
   }
+
+ // Método para iniciar la barra de progreso
+ startProgress() {
+  this.progress = 0;
+  this.intervalId = setInterval(() => {
+    this.progress += 0.01;
+    if (this.progress >= 1) {
+      clearInterval(this.intervalId);
+    }
+  }, 50);
+}
+
+// Método para detener la barra de progreso
+stopProgress() {
+  clearInterval(this.intervalId);
+  this.progress = 0;
+}
+
+
 
 }

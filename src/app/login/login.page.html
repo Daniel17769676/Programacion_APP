@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>SkeletonAPP</ion-title>
+  <ion-toolbar>    
+    <ion-title class="ion-text-center">SkeletonAPP</ion-title>
+    <p class="ion-text-center">Aqui comienza todo</p>
   </ion-toolbar>
 </ion-header>
 
@@ -15,7 +16,7 @@
 
     <ion-card>
       <ion-card-title>
-        <h3>Bienvenidos</h3>
+        <h3>Bienvenido!</h3>
       </ion-card-title>
 
       <!--Datos para el login--> 
@@ -32,11 +33,32 @@
         
       </ion-card-content>
 
+      
         <!--Boton para ingresar-->
         <ion-button expand="block" (click)="login()">Ingresar</ion-button> <!--click es como se llama a la funcion creada en login.page.ts-->
+
+        <!--Barra de progreso-->
+        <ion-progress-bar [value]="progress"></ion-progress-bar>
         
 
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
     </ion-card>
+
+
+    
 
 
 </div>

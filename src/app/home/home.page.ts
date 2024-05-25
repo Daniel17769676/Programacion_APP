@@ -2,18 +2,24 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
+
+
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
+
+
 export class HomePage {
 
-
+  
   usuarioRecibido: string = "";
   passwordRecibido: string = "";
   nombre: string = "";
   apellido: string = "";
+  animationState: boolean = false;
   SelectedOption: string = "";
   SelectedDate: string = "";
 
@@ -47,15 +53,16 @@ export class HomePage {
     if (this.nombre.trim() === '' || this.apellido.trim() === '') {
       this.presentAlert('Por favor llene todos los campos');
     } else {
-      this.presentAlert('Su nombre es:' + this.nombre + ' ' +this.apellido);
+      this.presentAlert('Su nombre es: ' + this.nombre + ' ' +this.apellido + ' ' + ',' + ' su fecha de nacimiento es: ' + this.SelectedDate + ' ' + 'y' + ' su nivel educacional es: ' + this.SelectedOption);
     }
   }
 
   LimpiarDatos() {
-    this.nombre = '';
+       this.nombre = '';
     this.apellido = '';
     this.SelectedOption = '';
     this.SelectedDate = '';
+  
   }
 
 }
