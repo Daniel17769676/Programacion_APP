@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,56 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Hola</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-card>
+
+      <ion-card-title>
+        <h3>Registro</h3>
+        <p>Usuario:{{usuarioRecibido}}</p>
+      </ion-card-title>
+
+      <ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
+
+      <ion-item>
+        <ion-label position="floating" >Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input type="text" [(ngModel)]="apellido"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nivel de educacion</ion-label>
+        <ion-select [(ngModel)]="SelectedOption"> <!--Ver otros Atributos en librerias-->
+          <ion-select-option value="option1">Primaria</ion-select-option>
+          <ion-select-option value="option2">Secundaria</ion-select-option>
+          <ion-select-option value="option3">Universitaria</ion-select-option>
+        </ion-select>
+
+        <ion-item>
+          <ion-label>Fecha de nacimiento</ion-label>
+          <ion-item>
+              <ion-input type="date" [(ngModel)]="SelectedDate"></ion-input>
+          </ion-item>
+        </ion-item>
+
+        
+      </ion-item>
+
+    </ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
+
+
+      <!--Botones de accion-->
+      <ion-button expand="block" (click)="LimpiarDatos()">Limpiar</ion-button> <!--click es como se llama a la funcion creada en login.page.ts-->
+      <ion-button expand="block" (click)="MostrarDatos()">Mostrar</ion-button>
+      
+
+    </ion-card>
   </div>
 </ion-content>
