@@ -14,7 +14,7 @@ import { AlertController } from '@ionic/angular';
 
 export class HomePage {
 
-  
+
   usuarioRecibido: string = "";
   passwordRecibido: string = "";
   nombre: string = "";
@@ -26,9 +26,9 @@ export class HomePage {
   nivelActividad: string = "";
   diasSemana: number = 0;
   animationState: boolean = false;
-  
 
-  constructor(private router: Router, private activateroute: ActivatedRoute, private alertController: AlertController ) {
+
+  constructor(private router: Router, private activateroute: ActivatedRoute, private alertController: AlertController) {
 
 
     this.activateroute.queryParams.subscribe(params => {
@@ -47,9 +47,21 @@ export class HomePage {
     const alert = await this.alertController.create({
       header: 'Mensaje',
       message: message,
-      buttons: ['OK']
-    }); 
+      buttons: [
+        {
+          text: 'IR A MI APP',
+          handler: () => {
 
+            if (this.nombre.trim() === '' || this.apellido.trim() === '' || this.peso === 0 || this.estatura === 0 || this.sexo.trim() === '' || this.fechaNacimiento === new Date() || this.nivelActividad.trim() === '' || this.diasSemana === 0)
+              { this.presentAlert('Por favor llene todos los campos');}
+
+            else {
+              this.router.navigate(['/tabs']);
+            }
+          }
+        }
+      ]
+    });
     await alert.present();
   }
 
@@ -59,14 +71,14 @@ export class HomePage {
       this.presentAlert('Por favor llene todos los campos');
     } else {
       this.presentAlert('Su datos son:\n' +
-                        'NOMBRE: '+ this.nombre + '\n'+
-                        'APELLIDO: ' +this.apellido + '\n'+
-                        'FECHA NACIMIENTO: '+ this.fechaNacimiento + '\n' +
-                        'PESO: ' + this.peso + '\n' +
-                        'ESTATURA: ' + this.estatura + '\n' +
-                        'SEXO: ' + this.sexo + '\n' +
-                        'NIVEL DE ACTIVIDAD: ' + this.nivelActividad + '\n' +
-                        'DIAS A LA SEMANA: ' + this.diasSemana + '\n');
+        'NOMBRE: ' + this.nombre + '\n' +
+        'APELLIDO: ' + this.apellido + '\n' +
+        'FECHA NACIMIENTO: ' + this.fechaNacimiento + '\n' +
+        'PESO: ' + this.peso + '\n' +
+        'ESTATURA: ' + this.estatura + '\n' +
+        'SEXO: ' + this.sexo + '\n' +
+        'NIVEL DE ACTIVIDAD: ' + this.nivelActividad + '\n' +
+        'DIAS A LA SEMANA: ' + this.diasSemana + '\n');
     }
   }
 
@@ -80,12 +92,18 @@ export class HomePage {
     this.fechaNacimiento = new Date();
     this.nivelActividad = '';
     this.diasSemana = 0;
- 
+
   }
 
   //Funcion para ir al login o cerrar sesion
   IrLogin() {
     this.router.navigate(['/login']);
+  }
+
+
+  //Funcion para ir a las paginas Tab1, Tab2, Tab3
+  IrTabs() {
+    this.router.navigate(['/tabs']);
   }
 
 }
