@@ -19,9 +19,14 @@ export class HomePage {
   passwordRecibido: string = "";
   nombre: string = "";
   apellido: string = "";
+  peso: number = 0;
+  estatura: number = 0;
+  sexo: string = "";
+  fechaNacimiento: Date = new Date();
+  nivelActividad: string = "";
+  diasSemana: number = 0;
   animationState: boolean = false;
-  SelectedOption: string = "";
-  SelectedDate: string = "";
+  
 
   constructor(private router: Router, private activateroute: ActivatedRoute, private alertController: AlertController ) {
 
@@ -48,21 +53,39 @@ export class HomePage {
     await alert.present();
   }
 
-
+  //Funcion para mostrar los datos
   MostrarDatos() {
     if (this.nombre.trim() === '' || this.apellido.trim() === '') {
       this.presentAlert('Por favor llene todos los campos');
     } else {
-      this.presentAlert('Su nombre es: ' + this.nombre + ' ' +this.apellido + ' ' + ',' + ' su fecha de nacimiento es: ' + this.SelectedDate + ' ' + 'y' + ' su nivel educacional es: ' + this.SelectedOption);
+      this.presentAlert('Su datos son:\n' +
+                        'NOMBRE: '+ this.nombre + '\n'+
+                        'APELLIDO: ' +this.apellido + '\n'+
+                        'FECHA NACIMIENTO: '+ this.fechaNacimiento + '\n' +
+                        'PESO: ' + this.peso + '\n' +
+                        'ESTATURA: ' + this.estatura + '\n' +
+                        'SEXO: ' + this.sexo + '\n' +
+                        'NIVEL DE ACTIVIDAD: ' + this.nivelActividad + '\n' +
+                        'DIAS A LA SEMANA: ' + this.diasSemana + '\n');
     }
   }
 
+  //Funcion para limpiar los datos
   LimpiarDatos() {
-       this.nombre = '';
+    this.nombre = '';
     this.apellido = '';
-    this.SelectedOption = '';
-    this.SelectedDate = '';
-  
+    this.peso = 0;
+    this.estatura = 0;
+    this.sexo = '';
+    this.fechaNacimiento = new Date();
+    this.nivelActividad = '';
+    this.diasSemana = 0;
+ 
+  }
+
+  //Funcion para ir al login o cerrar sesion
+  IrLogin() {
+    this.router.navigate(['/login']);
   }
 
 }

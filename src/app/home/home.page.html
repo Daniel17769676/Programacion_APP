@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>SkeletonAPP</ion-title>
+    <ion-title>MueveteAPP</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,20 +12,26 @@
   </ion-header>
 
   <div id="container">
+
+
     <ion-card>
 
+      <ion-chip> <!--Chip es un componente de ionic que permite mostrar una imagen y un texto-->
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-label>{{usuarioRecibido}}</ion-label>
+      </ion-chip>
+
+
       <ion-card-title>
-        <h3>Registro</h3>
-        <ion-chip>
-          <ion-avatar>
-            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          </ion-avatar>
-          <ion-label>{{usuarioRecibido}}</ion-label>
-        </ion-chip>
+
+        <h3>HOME</h3>
+        <h4>¡Completa tus datos!</h4>
+
       </ion-card-title>
 
       <ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
-
         <ion-item>
           <ion-label position="floating">Nombre</ion-label>
           <ion-input #nombreInput type="text" [(ngModel)]="nombre"></ion-input>
@@ -37,32 +43,63 @@
         </ion-item>
 
         <ion-item>
-          <ion-label>Nivel de educacion</ion-label>
-          <ion-select [(ngModel)]="SelectedOption"> <!--Ver otros Atributos en librerias-->
-            <ion-select-option value="option1">Primaria</ion-select-option>
-            <ion-select-option value="option2">Secundaria</ion-select-option>
-            <ion-select-option value="option3">Universitaria</ion-select-option>
-          </ion-select>
-
-          <ion-item>
-            <ion-label>Fecha de nacimiento</ion-label>
-            <ion-item>
-              <ion-input type="date" [(ngModel)]="SelectedDate"></ion-input>
-            </ion-item>
-          </ion-item>
-
-
+          <ion-label position="floating">Peso</ion-label>
+          <ion-input #pesoInput type="text" [(ngModel)]="peso"></ion-input>
         </ion-item>
 
+        <ion-item>
+          <ion-label position="floating">Estatura</ion-label>
+          <ion-input #estaturaInput type="text" [(ngModel)]="estatura"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Sexo</ion-label>
+          <ion-input #sexoInput type="text" [(ngModel)]="sexo"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating" class="right-label">Fecha de nacimiento</ion-label>
+          <br>
+          <ion-input type="date" [(ngModel)]="fechaNacimiento"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Nivel de actividad fisica</ion-label>
+          <ion-select [(ngModel)]="nivelActividad"> <!--Ver otros Atributos en librerias-->
+            <ion-select-option value="option1">Nula</ion-select-option>
+            <ion-select-option value="option2">Moderada</ion-select-option>
+            <ion-select-option value="option3">Alta</ion-select-option>
+          </ion-select>
+
+          <ion-label>Dias a la semana con tiempo</ion-label>
+          <ion-select [(ngModel)]="diasSemana"> <!--Ver otros Atributos en librerias-->
+            <ion-select-option value="option1">01 día</ion-select-option>
+            <ion-select-option value="option2">02 días</ion-select-option>
+            <ion-select-option value="option3">03 días ó más</ion-select-option>
+          </ion-select>
+        </ion-item>
       </ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
 
 
       <!--Botones de accion-->
-      <ion-button expand="block" (click)="LimpiarDatos()">Limpiar</ion-button><!--click es como se llama a la funcion creada en login.page.ts-->
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button expand="block" (click)="LimpiarDatos()">Limpiar</ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button expand="block" (click)="MostrarDatos()">Mostrar</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
-      <ion-button expand="block" (click)="MostrarDatos()">Mostrar</ion-button>
+      <!--Boton para guardar-->
+      <ion-button shape="round" color="tertiary">OK</ion-button>
 
+      <!--Boton para salir-->
+      <ion-button fill="outline" color="secondary" (click)="IrLogin()">SALIR</ion-button>
 
+      
     </ion-card>
   </div>
 </ion-content>
