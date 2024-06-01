@@ -33,13 +33,8 @@
 
       <ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
         <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
+          <ion-label position="floating">Nombre y Apellido</ion-label>
           <ion-input #nombreInput type="text" [(ngModel)]="nombre"></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label position="floating">Apellido</ion-label>
-          <ion-input #apellidoInput type="text" [(ngModel)]="apellido"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -58,9 +53,8 @@
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating" class="right-label">Fecha de nacimiento</ion-label>
-          <br>
-          <ion-input type="date" [(ngModel)]="fechaNacimiento"></ion-input>
+          <ion-label position="floating" class="right-label">Edad</ion-label>
+          <ion-input type="number" [(ngModel)]="edad"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -73,9 +67,9 @@
 
           <ion-label>Dias a la semana con tiempo</ion-label>
           <ion-select [(ngModel)]="diasSemana"> 
-            <ion-select-option value="option1">01 día</ion-select-option>
-            <ion-select-option value="option2">02 días</ion-select-option>
-            <ion-select-option value="option3">03 días ó más</ion-select-option>
+            <ion-select-option value="option1">01</ion-select-option>
+            <ion-select-option value="option2">02</ion-select-option>
+            <ion-select-option value="option3">03</ion-select-option>
           </ion-select>
         </ion-item>
       </ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
@@ -88,24 +82,23 @@
             <ion-button expand="block" (click)="LimpiarDatos()">Limpiar</ion-button>
           </ion-col>
           <ion-col size="6">
-            <ion-button expand="block" (click)="MostrarDatos()">¡VAMOS!</ion-button>
+            <ion-button expand="block" (click)="MostrarDatos()">Mostrar Datos</ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>
-
-      <!-- 
-      <ion-button shape="round" color="tertiary" (click)="IrTabs()">OK</ion-button>
-      -->
-      
-
-
-
-
+   
       <!--Boton para salir-->
-      <ion-button fill="outline" color="secondary" (click)="IrLogin()">SALIR</ion-button>
+      <ion-button fill="outline" color="secondary" (click)="IrLogin()">SALIR
+        <ion-icon name="log-in-outline"></ion-icon>
+      </ion-button>
 
 
-      
+      <!--Boton para ir a TAB1-->
+      <ion-button fill="outline" color="secondary" (click)="IrTab1()">IR A HOME
+        <ion-icon name="barbell-outline"></ion-icon>
+      </ion-button>
+
+           
     </ion-card>
   </div>
 </ion-content>

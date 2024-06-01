@@ -2,10 +2,22 @@
 
   <ion-toolbar>
     <ion-title>MueveteAPP</ion-title>
-    <!--Boton para ir a la pagina de registro-->
-    <ion-tab-button (click)="GoHome()">
-      <ion-label>Ir a Registro</ion-label>
-    </ion-tab-button>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+
+      <!--Boton para ir a la pagina de registro-->
+      <ion-tab-button (click)="GoHome()">
+        <ion-icon name="document-text"></ion-icon>
+        <ion-label>Ir a Registro</ion-label>
+      </ion-tab-button>
+
+      <!--Boton para cerrar sesion-->
+      <ion-tab-button (click)="CerrarSesion()">
+        <ion-label>Cerrar Sesion</ion-label>
+        <ion-icon name="log-in-outline"></ion-icon>
+      </ion-tab-button>
+    </div>
+
   </ion-toolbar>
 </ion-header>
 

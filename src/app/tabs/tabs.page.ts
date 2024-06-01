@@ -19,4 +19,11 @@ export class TabsPage implements OnInit {
     this.router.navigate(['/home']);
   }
 
+
+    //Funcion para ir al login o cerrar sesion
+    CerrarSesion() {
+      this.router.navigate(['/login']);
+    }
+  
+
 }

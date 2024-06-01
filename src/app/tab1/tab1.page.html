@@ -15,37 +15,42 @@
   <br>
 
   <ion-card>
- 
-    <ion-chip> <!--Chip es un componente de ionic que permite mostrar una imagen y un texto-->
-      <ion-avatar>
-        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-      </ion-avatar>
-      <ion-label>INTEPOLAR Nombre usuario</ion-label>
-    </ion-chip>
 
-    <br>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <ion-chip> <!--Chip es un componente de ionic que permite mostrar una imagen y un texto-->
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-label>Usuario: {{recibe_usu_home_nombre}}</ion-label>
+      </ion-chip>
+    </div>
 
-    <ion-chip>
-      <ion-icon name="scale"></ion-icon>
-      <ion-label>INTEPOLAR Peso</ion-label>
-    </ion-chip>
+    <div style="display: flex; justify-content: center; align-items: center;"> <!--Este div es para centrar los chips-->
+      <br>
+      <ion-chip>
+        <ion-icon name="scale"></ion-icon>
+        <ion-label>Peso: {{recibe_usu_home_peso}}</ion-label>
+      </ion-chip>
 
-    <ion-chip>
-      <ion-icon name="Body"></ion-icon>
-      <ion-label>INTEPOLAR Estatura</ion-label>
-    </ion-chip>
+      <ion-chip>
+        <ion-icon name="Body"></ion-icon>
+        <ion-label>Estatura: {{recibe_usu_home_estatura}}</ion-label>
+      </ion-chip>
 
-    <ion-chip>
-      <ion-icon name="male-female"></ion-icon>
-      <ion-label>INTEPOLAR Sexo</ion-label>
-    </ion-chip>
+      <ion-chip>
+        <ion-icon name="male-female"></ion-icon>
+        <ion-label>Sexo: {{recibe_usu_home_sexo}}</ion-label>
+      </ion-chip>
+    </div>
 
 
   </ion-card>
 
 
   <ion-content class="ion-text-center"> <!--Centrar texto-->
-    <ion-button>Crear Rutina</ion-button>
+    <ion-button (click)="IrTab2()">Crear Rutina
+      <ion-icon name="duplicate"></ion-icon>
+    </ion-button>
   </ion-content>
 
 

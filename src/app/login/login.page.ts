@@ -29,8 +29,9 @@ export class LoginPage implements OnInit {
     if (this.usuario.trim() == 'Daniel' && this.password.trim() == '1234') {
       //this.presentAlert('Correcto'); Cambiamos esta funcion para que redireccione a la pagina home y lo hace con NavigationExtras
       let navigationExtras: NavigationExtras = {
+        //State es un objeto que se puede enviar a la siguiente pagina, en este caso se envia el usuario y la contraseña a la pagina home
         state: {
-          usuarioEnviado: this.usuario,
+          usuarioEnviado: this.usuario, //En este caso usuarioEnviado se inicializa con this.usuario y this.usuario es el usuario que se ingreso en el input
           passwordEnviado: this.password
         }
         
