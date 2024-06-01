@@ -113,9 +113,6 @@ export class HomePage {
     this.enviarDatosTabs1();
   }
 
-
-
-
 }
     
 

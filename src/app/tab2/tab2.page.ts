@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab2',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab2Page implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private activaterouter: ActivatedRoute) { }
 
   ngOnInit() {
   }
+
+
+ //Funcion para boton crear rutina
+  anadirRutina(){
+    this.router.navigate(['/tabs/tab3']);
+    }
+
+
 
 }
