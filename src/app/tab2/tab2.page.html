@@ -11,15 +11,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <br>
-  <br>
-  <ion-text color="secondary" class="ion-text-center">
-    <h2>¡CREA AQUI TU RUTINA!
-      <ion-icon name="Flame"></ion-icon>
-    </h2>
-  </ion-text>
+  <ion-card-content class="cuerpo_page">
 
-  <ion-card-content>
+    <ion-text color="secondary" class="ion-text-center">
+      <h2>¡CREA AQUI TU RUTINA!
+        <ion-icon name="Flame"></ion-icon>
+      </h2>
+    </ion-text>
 
     <ion-item>
       <ion-label position="floating">Nombre de la rutina</ion-label>
@@ -66,9 +64,6 @@
       <ion-input #observacionesRutinaInput type="text" [(ngModel)]="observacionesRutina"></ion-input>
     </ion-item>
 
-    <BR>
-
-
     <!--Botones de Mostrar y Limpiar datos-->
 
     <ion-row>
@@ -80,19 +75,11 @@
       </ion-col>
     </ion-row>
 
-
-    <BR>
-
     <!--Boton de añadir rutina-->
     <ion-button (click)="anadirRutina()" style="display: flex; justify-content: center; align-items: center;">
       Añadir Rutina
       <ion-icon name="duplicate"></ion-icon>
     </ion-button>
-
-
-
-
-    <BR>
 
     <div style="display: flex; justify-content: center; align-items: center;">
       <ion-icon name="walk-outline" style="font-size: 3rem;"></ion-icon>

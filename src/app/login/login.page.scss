@@ -1,0 +1,18 @@
+ion-card{ // Clase creada para el card del login y que se haga transparente
+    background-color: transparent;
+}
+
+ion-card-title h3{ // Clase creada para el titulo del card del login
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+
+
+.logo{ // Clase creada para el logo del login
+    max-width: 30%; // Tamaño del logo
+    height: auto; // Altura del logo
+}

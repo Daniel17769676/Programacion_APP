@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">tab1</ion-title>
@@ -14,7 +14,7 @@
   <br>
   <br>
 
-  <ion-card>
+  <ion-card class="cuerpo_page">
 
     <div style="display: flex; justify-content: center; align-items: center;">
       <ion-chip> <!--Chip es un componente de ionic que permite mostrar una imagen y un texto-->
@@ -25,7 +25,8 @@
       </ion-chip>
     </div>
 
-    <div style="display: flex; justify-content: center; align-items: center;"> <!--Este div es para centrar los chips-->
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <!--Este div es para centrar los chips-->
       <br>
       <ion-chip>
         <ion-icon name="scale"></ion-icon>
@@ -44,14 +45,34 @@
     </div>
 
 
-  </ion-card>
-
-
-  <ion-content class="ion-text-center"> <!--Centrar texto-->
+    <div class="anadir_rutina">
     <ion-button (click)="IrTab2()">Crear Rutina
       <ion-icon name="duplicate"></ion-icon>
     </ion-button>
-  </ion-content>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    
 
+
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <ion-icon name="walk-outline" style="font-size: 3rem;"></ion-icon>
+      <ion-icon name="bicycle-outline" style="font-size: 3rem;"></ion-icon>
+      <ion-icon name="barbell-outline" style="font-size: 3rem;"></ion-icon>
+      <ion-icon name="body-outline" style="font-size: 3rem;"></ion-icon>
+      <ion-icon name="pulse-outline" style="font-size: 3rem;"></ion-icon>
+      <ion-icon name="fitness-outline" style="font-size: 3rem;"></ion-icon>
+      <ion-icon name="flame-outline" style="font-size: 3rem;"></ion-icon>
+      <ion-icon name="heart-outline" style="font-size: 3rem;"></ion-icon>
+      <ion-icon name="nutrition-outline" style="font-size: 3rem;"></ion-icon>
+      <ion-icon name="walk-outline" style="font-size: 3rem;"></ion-icon>
+      <ion-icon name="bicycle-outline" style="font-size: 3rem;"></ion-icon>
+    </div>
+
+  </ion-card>
+
+ 
 
 </ion-content>

@@ -26,4 +26,21 @@
   text-decoration: none;
 }
 
+ion-card { // Clase creada para el card del login y que se haga transparente y baje un poco
+  background-color: transparent;
+  margin-top: 5%; 
+}
 
+ion-card-title h3 { // Clase creada para el titulo del card del login
+  color: white;//Color de la letra
+  font-size: 30px;//Tamaño de la letra
+  font-weight: bold;//Negrita
+  text-align: center;//Centrado
+}
+
+ion-card-title h4 { // Clase creada para el :-moz-submit-invalidtitulo del card del login
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
