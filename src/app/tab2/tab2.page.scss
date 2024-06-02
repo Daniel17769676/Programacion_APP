@@ -1,0 +1,20 @@
+.custom-label { //funcion que se encarga de bajar el placeholder para que no se vea encimado con el texto del input
+    margin-bottom: 10px;
+}
+
+.logo{ // Clase creada para el logo del login
+    max-width: 5%; // Tamaño del logo
+    height: auto; // Altura del logo
+    margin-left: 46%; //Margen izquierdo
+    margin-top: -8%;
+
+  }
+  
+  /* Estilos viñetas pie de pagina */
+.vinetas{
+    color: rgb(248, 248, 248);
+    font-size: 20px; //Tamaño de la letra
+    font-weight: bold;//Negrita
+    text-align: center;//Centrado
+    margin-top: -0%;//Margen superior
+}

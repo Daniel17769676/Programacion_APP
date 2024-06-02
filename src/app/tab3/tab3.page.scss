@@ -1,0 +1,36 @@
+.logo{ // Clase creada para el logo del login
+    max-width: 5%; // Tamaño del logo
+    height: auto; // Altura del logo
+    margin-left: 46%; //Margen izquierdo
+    margin-top: -8%;
+
+  }
+  
+  
+  .IMG_BYE {
+    max-width: 50%; // Tamaño del logo
+    height: 100%; // Altura del logo
+    margin-left: 25%; // Margen izquierdo
+    margin-right: 0%;//Margen derecho
+    margin-top: -10; // Margen superior
+    border: 2px solid #000; // Borde sólido de 2px color negro
+    border-radius: 80px; // Bordes redondeados
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Sombra ligera
+    transition: all 0.3s ease-in-out; // Transición suave para todas las propiedades
+    object-fit: cover; // La imagen cubrirá completamente su contenedor
+}
+.IMG_BYE:hover { //Esta es una clase que se anida a IMG_BV
+    transform: scale(1.1); // Escalar la imagen al 110% al hacer hover
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); // Sombra más fuerte al hacer hover
+
+}
+
+
+/* Estilos viñetas pie de pagina */
+.vinetas{
+    color: rgb(250, 245, 245);
+    font-size: 20px; //Tamaño de la letra
+    font-weight: bold;//Negrita
+    text-align: center;//Centrado
+    margin-top: 2%;//Margen superior
+  }

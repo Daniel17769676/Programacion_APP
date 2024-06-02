@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">tab2</ion-title>
@@ -19,49 +20,66 @@
       </h2>
     </ion-text>
 
+    <!--Logo de la app-->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="logo">
+          <img class="logo" src="assets/Logo3.webp" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
     <ion-item>
-      <ion-label position="floating">Nombre de la rutina</ion-label>
-      <ion-input #nombreRutinaInput type="text" [(ngModel)]="nombreRutina"></ion-input>
+      <ion-label position="floating" class="custom-label">Nombre de la rutina</ion-label>
+      <ion-input #nombreRutinaInput type="text" [(ngModel)]="nombreRutina"
+        placeholder="Piernas, biceps u otro"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Tipo de rutina</ion-label>
-      <ion-input #tipoRutinaInput type="text" [(ngModel)]="tipoRutina"></ion-input>
+      <ion-label position="floating" class="custom-label">Tipo de rutina</ion-label>
+      <ion-input #tipoRutinaInput type="text" [(ngModel)]="tipoRutina" placeholder="Cardio o Pesas"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Duracion de la rutina</ion-label>
-      <ion-input #duracionRutinaInput type="text" [(ngModel)]="duracionRutina"></ion-input>
+      <ion-input #duracionRutinaInput type="text" [(ngModel)]="duracionRutina"
+        placeholder="Duracion en minutos: 30 Minutos, 10 minutos, etc"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Dias de la semana</ion-label>
-      <ion-input #diasRutinaInput type="text" [(ngModel)]="diasRutina"></ion-input>
+      <ion-input #diasRutinaInput type="text" [(ngModel)]="diasRutina"
+        aria-placeholder="03 días, 02 días, 01 día"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Ejercicios</ion-label>
-      <ion-input #ejerciciosRutinaInput type="text" [(ngModel)]="ejerciciosRutina"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Repeticiones</ion-label>
-      <ion-input #repeticionesRutinaInput type="text" [(ngModel)]="repeticionesRutina"></ion-input>
+      <ion-label position="floating" class="custom-label">Ejercicios</ion-label>
+      <ion-input #ejerciciosRutinaInput type="text" [(ngModel)]="ejerciciosRutina"
+        placeholder="Pres banca, bicicleta, mancuernas"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Series</ion-label>
-      <ion-input #seriesRutinaInput type="text" [(ngModel)]="seriesRutina"></ion-input>
+      <ion-input #seriesRutinaInput type="text" [(ngModel)]="seriesRutina"
+        placeholder="03 series, 02 series, 03 series"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Repeticiones</ion-label>
+      <ion-input #repeticionesRutinaInput type="text" [(ngModel)]="repeticionesRutina"
+        placeholder="03 repetciones, 04 repeticiones"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Descanso</ion-label>
-      <ion-input #descansoRutinaInput type="text" [(ngModel)]="descansoRutina"></ion-input>
+      <ion-input #descansoRutinaInput type="text" [(ngModel)]="descansoRutina"
+        placeholder="01 minutos, 05 minutos"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Observaciones</ion-label>
-      <ion-input #observacionesRutinaInput type="text" [(ngModel)]="observacionesRutina"></ion-input>
+      <ion-label position="floating" class="custom-label">Observaciones</ion-label>
+      <ion-input #observacionesRutinaInput type="text" [(ngModel)]="observacionesRutina"
+        placeholder="Rutina pesada, necesito apoyo de material, etc"></ion-input>
     </ion-item>
 
     <!--Botones de Mostrar y Limpiar datos-->
@@ -81,7 +99,7 @@
       <ion-icon name="duplicate"></ion-icon>
     </ion-button>
 
-    <div style="display: flex; justify-content: center; align-items: center; color: aliceblue;">
+    <div class="vinetas">
       <ion-icon name="walk-outline" style="font-size: 3rem;"></ion-icon>
       <ion-icon name="bicycle-outline" style="font-size: 3rem;"></ion-icon>
       <ion-icon name="barbell-outline" style="font-size: 3rem;"></ion-icon>

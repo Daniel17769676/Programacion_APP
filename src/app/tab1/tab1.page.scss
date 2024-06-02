@@ -2,7 +2,7 @@
 .anadir_rutina {
     display: flex;
     justify-content: center;
-    margin-top: 20%;
+    margin-top: 0%;
   }
 
   .logo{ // Clase creada para el logo del login
@@ -12,4 +12,30 @@
     margin-top: -6%;
 
   }
-  
+
+  .IMG_BV {
+    max-width: 100%; // Tamaño del logo
+    height: auto; // Altura del logo
+    margin-left: 0%; // Margen izquierdo
+    margin-top: 0%; // Margen superior
+    border: 2px solid #000; // Borde sólido de 2px color negro
+    border-radius: 80px; // Bordes redondeados
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); // Sombra ligera
+    transition: all 0.3s ease-in-out; // Transición suave para todas las propiedades
+    object-fit: cover; // La imagen cubrirá completamente su contenedor
+}
+
+.IMG_BV:hover { //Esta es una clase que se anida a IMG_BV
+    transform: scale(1.1); // Escalar la imagen al 110% al hacer hover
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); // Sombra más fuerte al hacer hover
+
+}
+
+/* Estilos viñetas pie de pagina */
+.vinetas{
+  color: rgb(250, 245, 245);
+  font-size: 20px; //Tamaño de la letra
+  font-weight: bold;//Negrita
+  text-align: center;//Centrado
+  margin-top: 0%;//Margen superior
+}
