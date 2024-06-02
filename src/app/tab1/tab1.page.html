@@ -2,9 +2,14 @@
   <ion-toolbar>
     <ion-title>tab1</ion-title>
   </ion-toolbar>
+
+
+
+
+
 </ion-header>
 
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">tab1</ion-title>
@@ -15,6 +20,18 @@
   <br>
 
   <ion-card class="cuerpo_page">
+
+    <!--Logo de la app-->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="logo">
+          <img class="logo" src="assets/Logo3.webp" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
 
     <div style="display: flex; justify-content: center; align-items: center;">
       <ion-chip> <!--Chip es un componente de ionic que permite mostrar una imagen y un texto-->
@@ -46,18 +63,18 @@
 
 
     <div class="anadir_rutina">
-    <ion-button (click)="IrTab2()">Crear Rutina
-      <ion-icon name="duplicate"></ion-icon>
-    </ion-button>
+      <ion-button (click)="IrTab2()">Crear Rutina
+        <ion-icon name="duplicate"></ion-icon>
+      </ion-button>
     </div>
     <br>
     <br>
     <br>
     <br>
-    
 
 
-    <div style="display: flex; justify-content: center; align-items: center;">
+
+    <div class="vinetas">
       <ion-icon name="walk-outline" style="font-size: 3rem;"></ion-icon>
       <ion-icon name="bicycle-outline" style="font-size: 3rem;"></ion-icon>
       <ion-icon name="barbell-outline" style="font-size: 3rem;"></ion-icon>
@@ -73,6 +90,6 @@
 
   </ion-card>
 
- 
+
 
 </ion-content>
