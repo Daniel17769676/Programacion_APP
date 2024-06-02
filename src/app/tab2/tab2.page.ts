@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab2',
@@ -20,16 +21,17 @@ export class Tab2Page implements OnInit {
   observacionesRutina: string = "";
 
 
-  constructor(private router: Router, private activaterouter: ActivatedRoute) { }
+  constructor(private router: Router, private activaterouter: ActivatedRoute, private alertController: AlertController) { }
 
   ngOnInit() {
+
   }
 
 
  //Funcion para boton crear rutina
   anadirRutina(){
-    this.enviarDatosTabs3();
-    this.router.navigate(['/tabs/tab3']);
+      this.router.navigate(['/tabs/tab3']);
+      this.enviarDatosTabs3();
     }
 
 
@@ -49,6 +51,44 @@ export class Tab2Page implements OnInit {
         }
     }
     this.router.navigate(['/tabs/tab3'], navigationExtras);//Con esta linea de codigo se envian los datos a la pagina tab1
+  }
+
+  async presentAlert(message: string) {
+    const alert = await this.alertController.create({
+      header: 'Mensaje',
+      message: message,
+      buttons: [ 'OK' ] //Boton para cerrar el mensaje      
+    });
+    await alert.present();
+  }
+
+  //Funcion para mostrar los datos
+  MostrarDatosTab2() {this.presentAlert
+    
+    ('Su rutina es:\n' +
+      'NOMBRE: ' + this.nombreRutina + '\n' +
+      'TIPO: ' + this.tipoRutina + '\n' +
+      'DURACION: ' + this.duracionRutina + '\n' +
+      'DIAS: ' + this.diasRutina + '\n' +
+      'EJERCICIOS: ' + this.ejerciciosRutina + '\n' +
+      'REPETICIONES: ' + this.repeticionesRutina + '\n' +
+      'SERIES: ' + this.seriesRutina + '\n' +
+      'DESCANSO: ' + this.descansoRutina + '\n' +
+      'OBSERVACIONES: ' + this.observacionesRutina);
+  }
+
+
+  //Funcion para limpiar los datos
+  LimpiarDatosTab2() {
+    this.nombreRutina = '';
+    this.tipoRutina = '';
+    this.duracionRutina = 0;
+    this.diasRutina = 0;
+    this.ejerciciosRutina = '';
+    this.repeticionesRutina = 0;
+    this.seriesRutina = 0;
+    this.descansoRutina = 0;
+    this.observacionesRutina = '';
   }
 
 

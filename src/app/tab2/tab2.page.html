@@ -23,56 +23,74 @@
 
     <ion-item>
       <ion-label position="floating">Nombre de la rutina</ion-label>
-      <ion-input #nombreRutinaInput type="text"></ion-input>
+      <ion-input #nombreRutinaInput type="text" [(ngModel)]="nombreRutina"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Tipo de rutina</ion-label>
-      <ion-input #tipoRutinaInput type="text"></ion-input>
+      <ion-input #tipoRutinaInput type="text" [(ngModel)]="tipoRutina"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Duracion de la rutina</ion-label>
-      <ion-input #duracionRutinaInput type="text"></ion-input>
+      <ion-input #duracionRutinaInput type="text" [(ngModel)]="duracionRutina"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Dias de la semana</ion-label>
-      <ion-input #diasRutinaInput type="text"></ion-input>
+      <ion-input #diasRutinaInput type="text" [(ngModel)]="diasRutina"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Ejercicios</ion-label>
-      <ion-input #ejerciciosRutinaInput type="text"></ion-input>
+      <ion-input #ejerciciosRutinaInput type="text" [(ngModel)]="ejerciciosRutina"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Repeticiones</ion-label>
-      <ion-input #repeticionesRutinaInput type="text"></ion-input>
+      <ion-input #repeticionesRutinaInput type="text" [(ngModel)]="repeticionesRutina"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Series</ion-label>
-      <ion-input #seriesRutinaInput type="text"></ion-input>
+      <ion-input #seriesRutinaInput type="text" [(ngModel)]="seriesRutina"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Descanso</ion-label>
-      <ion-input #descansoRutinaInput type="text"></ion-input>
+      <ion-input #descansoRutinaInput type="text" [(ngModel)]="descansoRutina"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Observaciones</ion-label>
-      <ion-input #observacionesRutinaInput type="text"></ion-input>
+      <ion-input #observacionesRutinaInput type="text" [(ngModel)]="observacionesRutina"></ion-input>
     </ion-item>
 
     <BR>
+
+
+    <!--Botones de Mostrar y Limpiar datos-->
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-button expand="block" (click)="LimpiarDatosTab2()">Limpiar</ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" (click)="MostrarDatosTab2()">Mostrar Datos</ion-button>
+      </ion-col>
+    </ion-row>
+
+
     <BR>
 
-    <ion-button routerLink="/tabs/tab3" style="display: flex; justify-content: center; align-items: center;"> <!--routerLink es una propiedad de ionic que permite redirigir a otra pagina TAB-->
+    <!--Boton de añadir rutina-->
+    <ion-button (click)="anadirRutina()" style="display: flex; justify-content: center; align-items: center;">
       Añadir Rutina
       <ion-icon name="duplicate"></ion-icon>
     </ion-button>
+
+
+
 
     <BR>
 

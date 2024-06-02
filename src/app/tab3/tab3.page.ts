@@ -38,6 +38,9 @@ export class Tab3Page implements OnInit {
   }
 
   ngOnInit() {
+
+    console.log('Nombre de la rutina recibido:', this.recibe_tab2_nombreRutina);
+
   }
 
 }
