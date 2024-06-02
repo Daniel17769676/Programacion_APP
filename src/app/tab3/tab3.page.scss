@@ -34,3 +34,21 @@
     text-align: center;//Centrado
     margin-top: 2%;//Margen superior
   }
+
+  @keyframes moverImagen {
+    0% {
+      transform: translateX(0); /* Empieza en el centro */
+    }
+    50% {
+      transform: translateX(-50%); /* Se mueve hacia la izquierda */
+    }
+    100% {
+      transform: translateX(50%); /* Termina moviéndose hacia la derecha */
+    }
+  }
+  
+  /* Aplicamos la animación a la imagen */
+  .imagen-animada {
+    position: relative; /* Para que la transformación funcione correctamente */
+    animation: moverImagen 4s ease-in-out infinite; /* Duración de 4 segundos, repetición infinita */
+  }
