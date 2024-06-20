@@ -3,6 +3,7 @@ import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { DbserviceService } from '../services/servicio-db.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -65,10 +66,9 @@ export class LoginPage implements OnInit {
           usuarioEnviado: this.usuario,
           passwordEnviado: this.password
         }
-      }
-      //setTimeout(() => {
+      }      
         this.router.navigate(['tabs/tab1'], navigationExtras);//Con esto se redirecciona a la pagina home
-      //}, 5000); // Tiempo barra de progreso
+      
     } else {
       //Usuario no encontrado
       this.presentAlert('Usuario o contraseña incorrectos');
@@ -79,13 +79,6 @@ export class LoginPage implements OnInit {
   {
     this.router.navigate(['/home']); // Redireccionar a la página de registro
   }
-
-
-
-
-  //El presentAlert sirve para mostrar un mensaje en pantalla
-
- 
 
   // Método para iniciar la barra de progreso
   startProgress() {
@@ -103,5 +96,30 @@ export class LoginPage implements OnInit {
     clearInterval(this.intervalId);
     this.progress = 0;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

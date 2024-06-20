@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listado-ejercicios',
@@ -10,7 +11,7 @@ export class ListadoEjerciciosPage implements OnInit {
 
   ejercicios: any[] = [];
 
-  constructor(private http: HttpClient ) { }
+  constructor(private http: HttpClient, private router: Router, ) { }
 
   ngOnInit() {
     this.fetchejercicios();
@@ -54,15 +55,15 @@ export class ListadoEjerciciosPage implements OnInit {
       }
 
       return result;
-
   }
 
-
-
-
-
-
-
-
-
+  IraHome(){
+    this.router.navigate(['/home']);
+  }
+  
+  salir(){
+    this.router.navigate(['//login']);
+  }
+  
+  
 }

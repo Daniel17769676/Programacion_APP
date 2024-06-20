@@ -81,9 +81,6 @@ export class HomePage implements OnInit{
     //this.usuarioRecibido = localStorage.getItem('usuario');
 
    //this.usuarioRebidoPersistente = localStorage.getItem('usuarioRebidoPersistente');//Paso 03: Se obtiene el dato del LOCAL STORAGE
-
-
-   
        
  }
 
@@ -101,8 +98,7 @@ export class HomePage implements OnInit{
         ('Su datos son:\n' +
         'USUARIO: ' + this.usuario + '\n' +
         'PASSWORD: ' + this.password + '\n' +
-        'NOMBRE: ' + this.nombre + '\n' +
-        'APELLIDO: ' + this.apellido + '\n' +
+        'NOMBRE: ' + this.nombre + '\n' +        
         'EDAD: ' + this.edad + '\n' +
         'PESO: ' + this.peso + '\n' +
         'ESTATURA: ' + this.estatura + '\n' +
