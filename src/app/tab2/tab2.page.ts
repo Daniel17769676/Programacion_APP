@@ -10,20 +10,35 @@ import { AlertController } from '@ionic/angular';
 export class Tab2Page implements OnInit {
 
  //Variables que van a recibir los datos del crear rutina
-  nombreRutina: string = "";
-  tipoRutina: string = "";
-  duracionRutina: any = 0;
-  diasRutina: any = 0;
-  ejerciciosRutina: string = "";
-  repeticionesRutina: number = 0;
-  seriesRutina: number = 0;
-  descansoRutina: any = 0;
-  observacionesRutina: string = "";
+  nombreRutina: any = "";
+  tipoRutina: any = "";
+  duracionRutina: any = "";
+  diasRutina: any = "";
+  ejerciciosRutina: any = "";
+  repeticionesRutina: any = "";
+  seriesRutina: any = "";
+  descansoRutina: any = "";
+  observacionesRutina: any = "";
+
+
 
 
   constructor(private router: Router, private activaterouter: ActivatedRoute, private alertController: AlertController) { }
 
   ngOnInit() {
+
+    //Con estas lineas de codigo se obtienen los datos del LOCAL STORAGE
+    this.nombreRutina = localStorage.getItem('nombreRutina');
+    this.tipoRutina = localStorage.getItem('tipoRutina');
+    this.duracionRutina = localStorage.getItem('duracionRutina');
+    this.diasRutina = localStorage.getItem('diasRutina');
+    this.ejerciciosRutina = localStorage.getItem('ejerciciosRutina');
+    this.repeticionesRutina = localStorage.getItem('repeticionesRutina');
+    this.seriesRutina = localStorage.getItem('seriesRutina');
+    this.descansoRutina = localStorage.getItem('descansoRutina');
+    this.observacionesRutina = localStorage.getItem('observacionesRutina');
+    
+
 
   }
 
@@ -75,6 +90,18 @@ export class Tab2Page implements OnInit {
       'SERIES: ' + this.seriesRutina + '\n' +
       'DESCANSO: ' + this.descansoRutina + '\n' +
       'OBSERVACIONES: ' + this.observacionesRutina);
+
+      //Con estas lineas de codigo se GUARDAN los datos en el LOCAL STORAGE, se guardan cuando se presiona el boton de mostrar datos
+      localStorage.setItem('nombreRutina', this.nombreRutina);
+      localStorage.setItem('tipoRutina', this.tipoRutina);
+      localStorage.setItem('duracionRutina', this.duracionRutina);
+      localStorage.setItem('diasRutina', this.diasRutina);
+      localStorage.setItem('ejerciciosRutina', this.ejerciciosRutina);
+      localStorage.setItem('seriesRutina', this.seriesRutina);
+      localStorage.setItem('repeticionesRutina', this.repeticionesRutina);
+      localStorage.setItem('descansoRutina', this.descansoRutina);
+      localStorage.setItem('observacionesRutina', this.observacionesRutina);
+
   }
 
 

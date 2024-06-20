@@ -21,9 +21,10 @@ export class TabsPage implements OnInit {
 
 
     //Funcion para ir al login o cerrar sesion
-    CerrarSesion() {
+    CerrarSesionTabs() {
+      localStorage.clear();//Se limpia el local storage al cerrar sesion
       this.router.navigate(['/login']);
-    }
+      }
   
 
 }

@@ -25,7 +25,7 @@
         <ion-avatar>
           <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
         </ion-avatar>
-        <ion-label>{{usuarioRecibido}}</ion-label>
+        <ion-label>{{usuarioRebidoPersistente}}</ion-label>
       </ion-chip>
 
 
@@ -48,8 +48,19 @@
       </ion-card-title>
 
       <ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
+
         <ion-item>
-          <ion-label position="floating">Nombre y Apellido</ion-label>
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="usuario"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="text" [(ngModel)]="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
           <ion-input #nombreInput type="text" [(ngModel)]="nombre"></ion-input>
         </ion-item>
 
@@ -73,21 +84,7 @@
           <ion-input type="number" [(ngModel)]="edad"></ion-input>
         </ion-item>
 
-        <ion-item>
-          <ion-label>Nivel de actividad fisica</ion-label>
-          <ion-select [(ngModel)]="nivelActividad">
-            <ion-select-option value="option1">Nula</ion-select-option>
-            <ion-select-option value="option2">Moderada</ion-select-option>
-            <ion-select-option value="option3">Alta</ion-select-option>
-          </ion-select>
-
-          <ion-label>Dias a la semana con tiempo</ion-label>
-          <ion-select [(ngModel)]="diasSemana"> 
-            <ion-select-option value="option1">01</ion-select-option>
-            <ion-select-option value="option2">02</ion-select-option>
-            <ion-select-option value="option3">03</ion-select-option>
-          </ion-select>
-        </ion-item>
+        
       </ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
 
 
@@ -102,9 +99,12 @@
           </ion-col>
         </ion-row>
       </ion-grid>
+
+      <!--Boton para guardar datos-->
+      <ion-button expand="block" (click)="guardar()">Guardar Datos</ion-button>
    
       <!--Boton para salir-->
-      <ion-button fill="outline" color="secondary" (click)="IrLogin()">SALIR
+      <ion-button fill="outline" color="secondary" (click)="CerrarSesionHome()">SALIR
         <ion-icon name="log-in-outline"></ion-icon>
       </ion-button>
 
