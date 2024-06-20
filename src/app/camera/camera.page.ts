@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Camera, CameraResultType,  } from '@capacitor/camera';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-camera',
@@ -11,7 +12,7 @@ export class CameraPage implements OnInit {
 
   public photo: SafeResourceUrl | undefined;
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer, private router: Router) { }
 
   ngOnInit() {
   }
@@ -34,5 +35,15 @@ export class CameraPage implements OnInit {
       console.error('Error al tomar la foto', error);
     }
   }
+
+  
+  IraHome(){
+    this.router.navigate(['/tabs/tab1']);
+  }
+  
+  salir(){
+    this.router.navigate(['//login']);
+  }
+  
 
 }

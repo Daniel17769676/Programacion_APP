@@ -13,14 +13,28 @@
 
   <ion-button expand="block" (click)="takePicture()">Take Picture</ion-button>
 
-    <ion-card *ngIf="photo">
-      <ion-card-header>
-        Captured Photo
-      </ion-card-header>
-      <ion-card-content>
-        <img [src]="photo"   *ngIf="photo" width="100%">
-      </ion-card-content>
-    </ion-card>
+  <ion-card *ngIf="photo">
+    <ion-card-header>
+      Captured Photo
+    </ion-card-header>
+    <ion-card-content>
+      <img [src]="photo" *ngIf="photo" width="100%">
+    </ion-card-content>
+  </ion-card>
+
+  
+
+  <div class="Estilo_botones">
+    <!--Boton para ir a HOME-->
+    <ion-button fill="outline" color="secondary" (click)="IraHome()">IR A HOME
+      <ion-icon name="barbell-outline"></ion-icon>
+    </ion-button>
+
+    <!--Boton para SALIR-->
+    <ion-button fill="outline" color="secondary" (click)="salir()">SALIR
+      <ion-icon name="log-in-outline"></ion-icon>
+    </ion-button>
+  </div>
 
 
 </ion-content>

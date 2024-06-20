@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Plugins} from '@capacitor/core';
+import { Router } from '@angular/router';
 
 declare var google: any;
 
@@ -16,7 +17,7 @@ export class MapPage implements OnInit {
 
   map: any;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
@@ -47,5 +48,16 @@ export class MapPage implements OnInit {
     console.error('Error al cargar el mapa', error);
   }
 }
+
+
+
+IraHome(){
+  this.router.navigate(['/tabs/tab1']);
+}
+
+salir(){
+  this.router.navigate(['//login']);
+}
+
 
 }

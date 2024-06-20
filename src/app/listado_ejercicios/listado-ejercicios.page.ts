@@ -11,7 +11,7 @@ export class ListadoEjerciciosPage implements OnInit {
 
   ejercicios: any[] = [];
 
-  constructor(private http: HttpClient, private router: Router, ) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.fetchejercicios();
@@ -58,7 +58,7 @@ export class ListadoEjerciciosPage implements OnInit {
   }
 
   IraHome(){
-    this.router.navigate(['/home']);
+    this.router.navigate(['/tabs/tab1']);
   }
   
   salir(){
