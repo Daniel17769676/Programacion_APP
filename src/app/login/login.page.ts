@@ -77,7 +77,7 @@ export class LoginPage implements OnInit {
 
   CrearCuenta()
   {
-    this.router.navigate(['/home']); // Redireccionar a la página de registro
+    this.router.navigate(['/registro']); // Redireccionar a la página de registro
   }
 
   // Método para iniciar la barra de progreso

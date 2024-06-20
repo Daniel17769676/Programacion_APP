@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+
+//Aqui se definen las rutas de la aplicacion en el LOCALHOST
+
 const routes: Routes = [
   {
 
@@ -15,8 +18,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then(m => m.registroPageModule)
   },
   {
     path: 'tabs',
@@ -25,7 +28,8 @@ const routes: Routes = [
   {
     path: 'listado-ejercicios',
     loadChildren: () => import('./listado_ejercicios/listado-ejercicios.module').then( m => m.ListadoEjerciciosPageModule)
-  },  {
+  },
+  {
     path: 'camera',
     loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
   },
@@ -33,20 +37,6 @@ const routes: Routes = [
     path: 'map',
     loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
   },
-
-
-  /*{
-    path: 'tab1',
-    loadChildren: () => import('./tab1/tab1.module').then( m => m.Tab1PageModule)
-  },
-  {
-    path: 'tab2',
-    loadChildren: () => import('./tab2/tab2.module').then( m => m.Tab2PageModule)
-  },
-  {
-    path: 'tab3',
-    loadChildren: () => import('./tab3/tab3.module').then( m => m.Tab3PageModule)
-  },*/
 
 
 ];

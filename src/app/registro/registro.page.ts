@@ -5,12 +5,12 @@ import { DbserviceService } from '../services/servicio-db.service';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  selector: 'app-registro',
+  templateUrl: './registro.page.html',
+  styleUrls: ['./registro.page.scss'],
 })
   
-export class HomePage implements OnInit{
+export class registroPage implements OnInit{
 
   //usuarioRecibido: any = "";
   //passwordRecibido: string = "";

@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-//import { SqliteService } from './services/sqlite.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,13 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor() {
-   //this.initializeApp();
+   
   }
-/*
-  initializeApp() {
-    this.sqliteService.createDatabase();
-  }
-  
-  */
 
 }

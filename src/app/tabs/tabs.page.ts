@@ -14,9 +14,9 @@ export class TabsPage implements OnInit {
   ngOnInit() {
   }
 
-  //Metodo para ir a la pagina home (registro) desde TABS
-  GoHome(){
-    this.router.navigate(['/home']);
+  //Metodo para ir a la pagina registro desde TABS
+  Registro(){
+    this.router.navigate(['/registro']);
   }
 
 
