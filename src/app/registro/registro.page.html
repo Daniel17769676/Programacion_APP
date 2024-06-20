@@ -15,29 +15,28 @@
 
   <div id="container" class="cuerpo_page">
 
+    <ion-chip> <!--Chip es un componente de ionic que permite mostrar una imagen y un texto-->
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>{{usuarioRebidoPersistente}}</ion-label>
+    </ion-chip>
+
+
+    <!--Logo de la app-->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" class="ion-text-center">
+          <img class="logo" src="assets/Logo3.webp" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
 
 
 
-    <ion-card>
 
-      <ion-chip> <!--Chip es un componente de ionic que permite mostrar una imagen y un texto-->
-        <ion-avatar>
-          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-        </ion-avatar>
-        <ion-label>{{usuarioRebidoPersistente}}</ion-label>
-      </ion-chip>
-
-
-      <!--Logo de la app-->
-      <ion-grid>
-        <ion-row>
-          <ion-col size="12" class="ion-text-center">
-            <img class="logo" src="assets/Logo3.webp" />
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-
+    <ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
 
 
       <ion-card-title>
@@ -47,45 +46,41 @@
 
       </ion-card-title>
 
-      <ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="usuario"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Usuario</ion-label>
-          <ion-input type="text" [(ngModel)]="usuario"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="text" [(ngModel)]="password"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type="text" [(ngModel)]="password"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input #nombreInput type="text" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
-          <ion-input #nombreInput type="text" [(ngModel)]="nombre"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating">Peso</ion-label>
+        <ion-input #pesoInput type="text" [(ngModel)]="peso"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Peso</ion-label>
-          <ion-input #pesoInput type="text" [(ngModel)]="peso"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating">Estatura</ion-label>
+        <ion-input #estaturaInput type="text" [(ngModel)]="estatura"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Estatura</ion-label>
-          <ion-input #estaturaInput type="text" [(ngModel)]="estatura"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating">Sexo</ion-label>
+        <ion-input #sexoInput type="text" [(ngModel)]="sexo"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Sexo</ion-label>
-          <ion-input #sexoInput type="text" [(ngModel)]="sexo"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label position="floating" class="right-label">Edad</ion-label>
+        <ion-input type="number" [(ngModel)]="edad"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label position="floating" class="right-label">Edad</ion-label>
-          <ion-input type="number" [(ngModel)]="edad"></ion-input>
-        </ion-item>
-
-
-      </ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
 
 
       <!-- Botones de acción -->
@@ -118,29 +113,13 @@
         SALIR
       </ion-button>
 
-      <!-- Botón para ir a TAB1 -->
+      <!-- Botón para ir a HOME -->
       <ion-button fill="outline" color="tertiary" (click)="IrTab1()">
         <ion-icon name="home-outline" slot="start"></ion-icon>
         IR A HOME
       </ion-button>
+      
+    </ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
 
-
-      <div class="vinetas">
-        <ion-icon name="walk-outline" style="font-size: 3rem;"></ion-icon>
-        <ion-icon name="bicycle-outline" style="font-size: 3rem;"></ion-icon>
-        <ion-icon name="barbell-outline" style="font-size: 3rem;"></ion-icon>
-        <ion-icon name="body-outline" style="font-size: 3rem;"></ion-icon>
-        <ion-icon name="pulse-outline" style="font-size: 3rem;"></ion-icon>
-        <ion-icon name="fitness-outline" style="font-size: 3rem;"></ion-icon>
-        <ion-icon name="flame-outline" style="font-size: 3rem;"></ion-icon>
-        <ion-icon name="heart-outline" style="font-size: 3rem;"></ion-icon>
-        <ion-icon name="nutrition-outline" style="font-size: 3rem;"></ion-icon>
-        <ion-icon name="walk-outline" style="font-size: 3rem;"></ion-icon>
-        <ion-icon name="bicycle-outline" style="font-size: 3rem;"></ion-icon>
-      </div>
-
-
-
-    </ion-card>
   </div>
 </ion-content>
