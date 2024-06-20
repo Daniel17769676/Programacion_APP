@@ -23,7 +23,7 @@ export class ListadoEjerciciosPage implements OnInit {
 
     //URL de API NO LOGRADA: https://api.api-ninjas.com/v1/exercises?muscle=
 
-    this.http.get('https://mindicador.cl/api').subscribe((data: any) => {
+    this.http.get('https://mindicador.cl/api').subscribe((Response: any) => {
       //Cuando la peticion sea exitosa, guardamos los datos en la variable ejercicios
 
 
