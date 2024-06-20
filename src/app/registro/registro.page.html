@@ -29,15 +29,15 @@
       </ion-chip>
 
 
-        <!--Logo de la app-->
-        <ion-grid>
-          <ion-row>
-            <ion-col size="12" class="ion-text-center">
-              <img class="logo" src="assets/Logo3.webp" />
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-  
+      <!--Logo de la app-->
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" class="ion-text-center">
+            <img class="logo" src="assets/Logo3.webp" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
 
 
       <ion-card-title>
@@ -84,34 +84,44 @@
           <ion-input type="number" [(ngModel)]="edad"></ion-input>
         </ion-item>
 
-        
+
       </ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
 
 
-      <!--Botones de accion-->
+      <!-- Botones de acción -->
       <ion-grid>
         <ion-row>
           <ion-col size="6">
-            <ion-button expand="block" (click)="LimpiarDatos()">Limpiar</ion-button>
+            <ion-button expand="block" color="warning" (click)="LimpiarDatos()">
+              <ion-icon name="trash" slot="start"></ion-icon>
+              Limpiar
+            </ion-button>
           </ion-col>
           <ion-col size="6">
-            <ion-button expand="block" (click)="MostrarDatos()">Mostrar Datos</ion-button>
+            <ion-button expand="block" color="success" (click)="MostrarDatos()">
+              <ion-icon name="eye-outline" slot="start"></ion-icon>
+              Mostrar Datos
+            </ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>
 
-      <!--Boton para guardar datos-->
-      <ion-button expand="block" (click)="guardar()">Guardar Datos</ion-button>
-   
-      <!--Boton para salir-->
-      <ion-button fill="outline" color="secondary" (click)="CerrarSesionHome()">SALIR
-        <ion-icon name="log-in-outline"></ion-icon>
+      <!-- Botón para guardar datos -->
+      <ion-button expand="block" color="primary" (click)="guardar()">
+        <ion-icon name="save-outline" slot="start"></ion-icon>
+        Guardar Datos
       </ion-button>
 
+      <!-- Botón para salir -->
+      <ion-button fill="outline" color="danger" (click)="CerrarSesionHome()">
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        SALIR
+      </ion-button>
 
-      <!--Boton para ir a TAB1-->
-      <ion-button fill="outline" color="secondary" (click)="IrTab1()">IR A HOME
-        <ion-icon name="barbell-outline"></ion-icon>
+      <!-- Botón para ir a TAB1 -->
+      <ion-button fill="outline" color="tertiary" (click)="IrTab1()">
+        <ion-icon name="home-outline" slot="start"></ion-icon>
+        IR A HOME
       </ion-button>
 
 
@@ -128,9 +138,9 @@
         <ion-icon name="walk-outline" style="font-size: 3rem;"></ion-icon>
         <ion-icon name="bicycle-outline" style="font-size: 3rem;"></ion-icon>
       </div>
-  
 
-           
+
+
     </ion-card>
   </div>
 </ion-content>

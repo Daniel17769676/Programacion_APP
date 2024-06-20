@@ -71,22 +71,31 @@
       </ion-row>
     </ion-grid>
 
+    <!-- Botón para añadir rutinas -->
+
+    <ion-button expand="block" fill="outline" (click)="IrTab2()">
+      <ion-icon name="duplicate" slot="start"></ion-icon>
+      Crea tu rutina
+    </ion-button>
 
 
+    <!-- Botón para consumir APIS -->
+    <ion-button expand="block" color="success" (click)="ListadoEjercicios()">
+      <ion-icon name="list" slot="start"></ion-icon>
+      Listado de ejercicios
+    </ion-button>
 
-    <!--Boton para añadir rutinas-->
-    <div class="anadir_rutina">
-      <ion-button (click)="IrTab2()">Crear Rutina
-        <ion-icon name="duplicate"></ion-icon>
-      </ion-button>
-    </div>
-    <!--Boton para consumir APIS-->
-    <ion-button expand="block" (click)="ListadoEjercicios()">APIS: Listado de ejercicios</ion-button>
-    <!--Boton para abrir la CAMARA-->
-    <ion-button expand="block" (click)="AbrirCamara()">Abrir Camara</ion-button>
-    <!--Boton para ir al MAPA-->
-    <ion-button expand="block" (click)="AbrirMapa()">Abrir Mapa</ion-button>
+    <!-- Botón para abrir la CAMARA -->
+    <ion-button expand="block" color="tertiary" (click)="AbrirCamara()">
+      <ion-icon name="camera" slot="start"></ion-icon>
+      Camara
+    </ion-button>
 
+    <!-- Botón para ir al MAPA -->
+    <ion-button expand="block" color="primary" (click)="AbrirMapa()">
+      <ion-icon name="map" slot="start"></ion-icon>
+      Mapa
+    </ion-button>
 
 
 

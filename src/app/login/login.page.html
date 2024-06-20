@@ -44,16 +44,21 @@
 
       </ion-card-content>
 
+      <!-- Boton para ingresar con icono -->
+      <ion-button expand="block" color="primary" (click)="login()">
+        Ingresar
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+      </ion-button>
 
-      <!--Boton para ingresar, ademas CLICK es como se llama a la funcion creada en login.page.ts-->
-      <ion-button expand="block" (click)="login()">Ingresar</ion-button>
+      <!-- Boton para crear cuenta con icono -->
+      <ion-button expand="block" color="secondary" (click)="CrearCuenta()">
+        Crear Cuenta
+        <ion-icon slot="end" name="person-add-outline"></ion-icon>
+      </ion-button>
 
-      <!--Boton para crear cuenta-->
-      <ion-button expand="block" class="btnCrearCta" (click)="CrearCuenta()">CREAR CUENTA</ion-button>
 
       <!--Barra de progreso-->
       <ion-progress-bar [value]="progress"></ion-progress-bar>
-
 
       <!--
       Mensaje de session activa

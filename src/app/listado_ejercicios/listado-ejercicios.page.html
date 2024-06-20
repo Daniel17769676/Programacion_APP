@@ -1,6 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Listado_ejercicios</ion-title>
+
+
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <!-- Boton para ir a HOME con icono -->
+      <ion-button fill="outline" color="secondary" (click)="IraHome()">
+        HOME
+        <ion-icon slot="end" name="home"></ion-icon>
+      </ion-button>
+
+      <!-- Titulo de la pagina, centrado entre ambos botones -->
+      <ion-title style="text-align: center; flex: 1;">Ejercicios</ion-title>
+
+      <!-- Boton para SALIR con icono -->
+      <ion-button fill="outline" color="secondary" (click)="salir()">
+        SALIR
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+      </ion-button>
+    </div>
+
+
   </ion-toolbar>
 </ion-header>
 
@@ -10,6 +29,7 @@
       <ion-title size="large">Escoje tu ejercicio</ion-title>
     </ion-toolbar>
   </ion-header>
+
 
   <ion-list>
     <ion-card *ngFor="let item of ejercicios">
@@ -21,22 +41,12 @@
         <p><strong>Musculo:</strong> {{ item.muscle }}</p>
         <p><strong>Equipamiento:</strong> {{ item.equipment }}</p>
         <p><strong>Dificultad:</strong> {{ item.difficulty }}</p>
-        <p><strong>Instrucciones:</strong> {{ item.instructions }}</p>        
+        <p><strong>Instrucciones:</strong> {{ item.instructions }}</p>
       </ion-card-content>
-    </ion-card>     
+    </ion-card>
   </ion-list>
 
 
-  <div class="Estilo_botones">
-    <!--Boton para ir a HOME-->
-    <ion-button fill="outline" color="secondary" (click)="IraHome()">IR A HOME
-      <ion-icon name="barbell-outline"></ion-icon>
-    </ion-button>
 
-    <!--Boton para SALIR-->
-    <ion-button fill="outline" color="secondary" (click)="salir()">SALIR
-      <ion-icon name="log-in-outline"></ion-icon>
-    </ion-button>
-  </div>
 
 </ion-content>

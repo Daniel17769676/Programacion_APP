@@ -1,9 +1,10 @@
 .Estilo_botones {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  flex-direction: row;
+  display: flex;//Visualización de los botones
+  justify-content: center;//Justificación de los botones
+  align-items: center;//Alineación de los botones
+  height: 5%;//Altura de los botones
+  flex-direction: row;//Dirección de los botones
   gap: 10px; /* Espacio entre los botones */
+
 }
 

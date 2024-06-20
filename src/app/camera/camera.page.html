@@ -1,6 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>camera</ion-title>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <!-- Boton para ir a HOME con icono -->
+      <ion-button fill="outline" color="secondary" (click)="IraHome()">
+        HOME
+        <ion-icon slot="end" name="home"></ion-icon>
+      </ion-button>
+
+      <!-- Titulo de la pagina, centrado entre ambos botones -->
+      <ion-title style="text-align: center; flex: 1;">Camara</ion-title>
+
+      <!-- Boton para SALIR con icono -->
+      <ion-button fill="outline" color="secondary" (click)="salir()">
+        SALIR
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+      </ion-button>
+    </div>
+
   </ion-toolbar>
 </ion-header>
 
@@ -11,7 +28,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-button expand="block" (click)="takePicture()">Take Picture</ion-button>
+  <ion-button expand="block" (click)="takePicture()">¡Sacate una foto!</ion-button>
 
   <ion-card *ngIf="photo">
     <ion-card-header>
@@ -23,18 +40,5 @@
   </ion-card>
 
   
-
-  <div class="Estilo_botones">
-    <!--Boton para ir a HOME-->
-    <ion-button fill="outline" color="secondary" (click)="IraHome()">IR A HOME
-      <ion-icon name="barbell-outline"></ion-icon>
-    </ion-button>
-
-    <!--Boton para SALIR-->
-    <ion-button fill="outline" color="secondary" (click)="salir()">SALIR
-      <ion-icon name="log-in-outline"></ion-icon>
-    </ion-button>
-  </div>
-
 
 </ion-content>

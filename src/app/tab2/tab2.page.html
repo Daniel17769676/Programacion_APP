@@ -82,22 +82,31 @@
         placeholder="Rutina pesada, necesito apoyo de material, etc"></ion-input>
     </ion-item>
 
-    <!--Botones de Mostrar y Limpiar datos-->
-
+    <!-- Botones de Mostrar y Limpiar datos -->
     <ion-row>
       <ion-col size="6">
-        <ion-button expand="block" (click)="LimpiarDatosTab2()">Limpiar</ion-button>
+        <ion-button expand="block" color="warning" (click)="LimpiarDatosTab2()">
+          <ion-icon name="trash" slot="start"></ion-icon>
+          Limpiar
+        </ion-button>
       </ion-col>
       <ion-col size="6">
-        <ion-button expand="block" (click)="MostrarDatosTab2()">Mostrar Datos</ion-button>
+        <ion-button expand="block" color="success" (click)="MostrarDatosTab2()">
+          <ion-icon name="eye" slot="start"></ion-icon>
+          Mostrar Datos
+        </ion-button>
       </ion-col>
     </ion-row>
 
-    <!--Boton de añadir rutina-->
-    <ion-button (click)="anadirRutina()" style="display: flex; justify-content: center; align-items: center;">
+    <!-- Botón de añadir rutina -->
+    <ion-button expand="block" color="primary" (click)="anadirRutina()"
+      style="display: flex; justify-content: center; align-items: center;">
+      <ion-icon name="duplicate" slot="start"></ion-icon>
       Añadir Rutina
-      <ion-icon name="duplicate"></ion-icon>
     </ion-button>
+
+
+
 
     <div class="vinetas">
       <ion-icon name="walk-outline" style="font-size: 3rem;"></ion-icon>
