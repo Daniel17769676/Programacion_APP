@@ -7,41 +7,24 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Listado_ejercicios</ion-title>
+      <ion-title size="large">Escoje tu ejercicio</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-list>
     <ion-card *ngFor="let item of ejercicios">
       <ion-card-header>
-        <ion-card-title>{{ item.nombre }}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p><strong>Código:</strong> {{ item.codigo }}</p>
-        <p><strong>Unidad de Medida:</strong> {{ item.unidad_medida }}</p>
-        <p><strong>Fecha:</strong> {{ item.fecha | date:'short' }}</p>
-        <p><strong>Valor:</strong> {{ item.valor | number:'1.2-2' }}</p>
-      </ion-card-content>
-    </ion-card>
-  </ion-list>
-
-  <!-- 
-  API NO LOGRADA 
-  <ion-list>
-    <ion-card *ngFor="let item of ejercicios">
-      <ion-card-header>
         <ion-card-title>{{ item.name }}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p><strong>Código:</strong> {{ item.type }}</p>
-        <p><strong>Unidad de Medida:</strong> {{ item.muscle }}</p>
-        <p><strong>Unidad de Medida:</strong> {{ item.equipment }}</p>
-        <p><strong>Unidad de Medida:</strong> {{ item.difficulty }}</p>
-        <p><strong>Unidad de Medida:</strong> {{ item.instructions }}</p>        
+        <p><strong>Tipo:</strong> {{ item.type }}</p>
+        <p><strong>Musculo:</strong> {{ item.muscle }}</p>
+        <p><strong>Equipamiento:</strong> {{ item.equipment }}</p>
+        <p><strong>Dificultad:</strong> {{ item.difficulty }}</p>
+        <p><strong>Instrucciones:</strong> {{ item.instructions }}</p>        
       </ion-card-content>
     </ion-card>     
   </ion-list>
-  -->
 
 
   <div class="Estilo_botones">

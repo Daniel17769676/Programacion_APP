@@ -11,6 +11,8 @@ export class ListadoEjerciciosPage implements OnInit {
 
   ejercicios: any[] = [];
 
+  private apiKey = 'W5Tr51bwx5YkfrrB58GXFQ==5ZGHhvarZJnEXaO4';//COD API PRIVADA
+
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
@@ -19,11 +21,15 @@ export class ListadoEjerciciosPage implements OnInit {
   }
 
   fetchejercicios(){
+
+    const url = `https://api.api-ninjas.com/v1/exercises`;//COD API PRIVADA
+    const headers = { 'X-Api-Key': this.apiKey }//COD API PRIVADA
+
+
     //Realizamos la peticion a la API
 
-    //URL de API NO LOGRADA: https://api.api-ninjas.com/v1/exercises?muscle=
 
-    this.http.get('https://mindicador.cl/api').subscribe((Response: any) => {
+    this.http.get(url, { headers }).subscribe((Response: any) =>{
       //Cuando la peticion sea exitosa, guardamos los datos en la variable ejercicios
 
 
@@ -44,12 +50,9 @@ export class ListadoEjerciciosPage implements OnInit {
 
 
     //Recorremos el arreglo de ejercicios
-    for (const key in data){
-
-    
+    for (const key in data){  
       if (data.hasOwnProperty(key) && typeof data[key] === 'object')
         {
-
           result.push(data[key]);
         }
       }
