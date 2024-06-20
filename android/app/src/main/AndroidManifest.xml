@@ -38,4 +38,14 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permisos en caso de que el movil solcite accesos adicionales-->
+    <!-- Permision camera  https://capacitorjs.com/docs/apis/camera-->
+    <!--
+    usses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    usses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    -->
+
+
+
 </manifest>

@@ -25,7 +25,11 @@ const routes: Routes = [
   {
     path: 'listado-ejercicios',
     loadChildren: () => import('./listado_ejercicios/listado-ejercicios.module').then( m => m.ListadoEjerciciosPageModule)
+  },  {
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
   },
+
 
   /*{
     path: 'tab1',

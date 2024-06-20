@@ -77,6 +77,9 @@ export class Tab1Page implements OnInit {
     this.router.navigate(['/listado-ejercicios']);
   }
 
+  AbrirCamara(){
+    this.router.navigate(['/camera']);
+  }
 
 
 }
