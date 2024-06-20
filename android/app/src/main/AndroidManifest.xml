@@ -39,7 +39,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- Permisos en caso de que el movil solcite accesos adicionales-->
+    <!--PERMISOS DE MAPA-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- PERMISOS DE CAMARA (en caso de solicitar)-->
     <!-- Permision camera  https://capacitorjs.com/docs/apis/camera-->
     <!--
     usses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
