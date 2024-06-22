@@ -17,7 +17,6 @@ export class registroPage implements OnInit{
   usuario: any = "";
   password: any = "";
   nombre: any = "";
-  apellido: any = "";
   peso: any = "";
   estatura: any = "";
   sexo: any = "";
@@ -72,8 +71,7 @@ export class registroPage implements OnInit{
     //Con estas lineas de codigo se obtienen los datos del LOCAL STORAGE
     this.usuario = localStorage.getItem('usuario');
     this.password = localStorage.getItem('password');
-    this.nombre = localStorage.getItem('nombre');
-    this.apellido = localStorage.getItem('apellido');
+    this.nombre = localStorage.getItem('nombre');    
     this.edad = localStorage.getItem('edad');
     this.peso = localStorage.getItem('peso');
     this.estatura = localStorage.getItem('estatura');
@@ -109,8 +107,7 @@ export class registroPage implements OnInit{
         //Con estas lineas de codigo se guardan los datos en el LOCAL STORAGE
         localStorage.setItem('usuario', this.usuario);
         localStorage.setItem('password', this.password);        
-        localStorage.setItem('nombre', this.nombre);
-        localStorage.setItem('apellido', this.apellido);
+        localStorage.setItem('nombre', this.nombre);        
         localStorage.setItem('edad', this.edad);
         localStorage.setItem('peso', this.peso);
         localStorage.setItem('estatura', this.estatura);
@@ -123,8 +120,7 @@ export class registroPage implements OnInit{
   LimpiarDatos() {
     this.usuario = '';
     this.password = '';
-    this.nombre = '';
-    this.apellido = '';
+    this.nombre = '';    
     this.peso = '';
     this.estatura = '';
     this.sexo = '';
@@ -149,8 +145,7 @@ export class registroPage implements OnInit{
   enviarDatosTabs1() {
     let navigationExtras: NavigationExtras = {
       state: {
-        envia_usu_home_nombre: this.nombre,
-        envia_usu_home_apellido: this.apellido,
+        envia_usu_home_nombre: this.nombre,        
         envia_usu_home_peso: this.peso,
         envia_usu_home_estatura: this.estatura,
         envia_usu_home_sexo: this.sexo,
