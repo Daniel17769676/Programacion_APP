@@ -1,9 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>MueveteAPP</ion-title>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <!-- Boton para ir a HOME con icono -->
+      <ion-button fill="outline" color="secondary" (click)="home()">
+        HOME
+        <ion-icon slot="end" name="home"></ion-icon>
+      </ion-button>
+
+      <!-- Titulo de la pagina, centrado entre ambos botones -->
+      <ion-title style="text-align: center; flex: 1;">MueveteAPP</ion-title>
+
+      <!-- Boton para SALIR con icono -->
+      <ion-button fill="outline" color="secondary" (click)="salir()">
+        SALIR
+        <ion-icon slot="end" name="log-in-outline"></ion-icon>
+      </ion-button>
+    </div>
+
   </ion-toolbar>
-
-
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -12,16 +27,16 @@
       <ion-title size="large">Hola</ion-title>
     </ion-toolbar>
   </ion-header>
+  
 
   <div id="container" class="cuerpo_page">
-
-    <ion-chip> <!--Chip es un componente de ionic que permite mostrar una imagen y un texto-->
-      <ion-avatar>
-        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-      </ion-avatar>
-      <ion-label>{{usuarioRebidoPersistente}}</ion-label>
+    <br>
+    <br>
+    
+    <ion-chip> <!--Chip es un componente de ionic que permite mostrar una imagen y un texto-->      
+        <ion-icon name="person-add-sharp"></ion-icon>      
+      <ion-label>Nuevo Usuario</ion-label>
     </ion-chip>
-
 
     <!--Logo de la app-->
     <ion-grid>
@@ -33,11 +48,7 @@
     </ion-grid>
 
 
-
-
-
     <ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
-
 
       <ion-card-title>
 
@@ -105,18 +116,6 @@
       <ion-button expand="block" color="primary" (click)="guardar()">
         <ion-icon name="save-outline" slot="start"></ion-icon>
         Guardar Datos
-      </ion-button>
-
-      <!-- Botón para salir -->
-      <ion-button fill="outline" color="danger" (click)="CerrarSesionHome()">
-        <ion-icon name="log-out-outline" slot="start"></ion-icon>
-        SALIR
-      </ion-button>
-
-      <!-- Botón para ir a HOME -->
-      <ion-button fill="outline" color="tertiary" (click)="IrTab1()">
-        <ion-icon name="home-outline" slot="start"></ion-icon>
-        IR A HOME
       </ion-button>
       
     </ion-card-content> <!--Todos los item deben estar dentro de un card-content-->
