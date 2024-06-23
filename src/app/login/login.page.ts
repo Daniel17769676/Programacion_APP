@@ -28,18 +28,10 @@ export class LoginPage implements OnInit {
 
 
   ngOnInit() { // Método que se ejecuta al iniciar la página
-
-    /*
-    this.sesionactiva = localStorage.getItem('sesionactiva'); // Se obtiene el valor de la variable sesionactiva del localStorage
-    if (this.sesionactiva == 'SI') 
-    { 
-      this.mensaje('Sesión activa'); // Si la variable es igual a 'SI' se muestra un mensaje
-    }
-    else
-    {
-      this.mensaje('Sesión NO activa'); // Si la variable es igual a 'NO' se muestra un mensaje
-    }
-*/
+  
+    this.usuario = ""; // Limpiar el campo de usuario
+    this.password = ""; // Limpiar el campo de contraseña
+    
   }
 
   async presentAlert(message: string) {

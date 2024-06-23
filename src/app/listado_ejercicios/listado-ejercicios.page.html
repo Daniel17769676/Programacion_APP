@@ -18,8 +18,6 @@
         <ion-icon slot="end" name="log-in-outline"></ion-icon>
       </ion-button>
     </div>
-
-
   </ion-toolbar>
 </ion-header>
 
@@ -30,23 +28,22 @@
     </ion-toolbar>
   </ion-header>
 
+  <div id="container" class="cuerpo_page">
 
-  <ion-list>
-    <ion-card *ngFor="let item of ejercicios">
-      <ion-card-header>
-        <ion-card-title>{{ item.name }}</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p><strong>Tipo:</strong> {{ item.type }}</p>
-        <p><strong>Musculo:</strong> {{ item.muscle }}</p>
-        <p><strong>Equipamiento:</strong> {{ item.equipment }}</p>
-        <p><strong>Dificultad:</strong> {{ item.difficulty }}</p>
-        <p><strong>Instrucciones:</strong> {{ item.instructions }}</p>
-      </ion-card-content>
-    </ion-card>
-  </ion-list>
-
-
-
+    <ion-list>
+      <ion-card *ngFor="let item of ejercicios">
+        <ion-card-header>
+          <ion-card-title>{{ item.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p><strong>Tipo:</strong> {{ item.type }}</p>
+          <p><strong>Musculo:</strong> {{ item.muscle }}</p>
+          <p><strong>Equipamiento:</strong> {{ item.equipment }}</p>
+          <p><strong>Dificultad:</strong> {{ item.difficulty }}</p>
+          <p><strong>Instrucciones:</strong> {{ item.instructions }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </div>
 
 </ion-content>

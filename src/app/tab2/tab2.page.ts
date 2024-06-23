@@ -9,7 +9,7 @@ import { AlertController } from '@ionic/angular';
 })
 export class Tab2Page implements OnInit {
 
- //Variables que van a recibir los datos del crear rutina
+  //Variables que van a recibir los datos del crear rutina
   nombreRutina: any = "";
   tipoRutina: any = "";
   duracionRutina: any = "";
@@ -37,21 +37,21 @@ export class Tab2Page implements OnInit {
     this.seriesRutina = localStorage.getItem('seriesRutina');
     this.descansoRutina = localStorage.getItem('descansoRutina');
     this.observacionesRutina = localStorage.getItem('observacionesRutina');
-    
+
 
 
   }
 
 
- //Funcion para boton crear rutina
-  anadirRutina(){
-      this.router.navigate(['/tabs/tab3']);
-      this.enviarDatosTabs3();
-    }
+  //Funcion para boton crear rutina
+  anadirRutina() {
+    this.router.navigate(['/tabs/tab3']);
+    this.enviarDatosTabs3();
+  }
 
 
   //Definimos la funcion para enviar los datos a tab3
- enviarDatosTabs3() {
+  enviarDatosTabs3() {
     let navigationExtras: NavigationExtras = {
       state: {
         envia_tab2_nombreRutina: this.nombreRutina,
@@ -63,7 +63,7 @@ export class Tab2Page implements OnInit {
         envia_tab2_seriesRutina: this.seriesRutina,
         envia_tab2_descansoRutina: this.descansoRutina,
         envia_tab2_observacionesRutina: this.observacionesRutina
-        }
+      }
     }
     this.router.navigate(['/tabs/tab3'], navigationExtras);//Con esta linea de codigo se envian los datos a la pagina tab1
   }
@@ -72,35 +72,36 @@ export class Tab2Page implements OnInit {
     const alert = await this.alertController.create({
       header: 'Mensaje',
       message: message,
-      buttons: [ 'OK' ] //Boton para cerrar el mensaje      
+      buttons: ['OK'] //Boton para cerrar el mensaje      
     });
     await alert.present();
   }
 
   //Funcion para mostrar los datos
-  MostrarDatosTab2() {this.presentAlert
-    
-    ('Su rutina es:\n' +
-      'NOMBRE: ' + this.nombreRutina + '\n' +
-      'TIPO: ' + this.tipoRutina + '\n' +
-      'DURACION: ' + this.duracionRutina + '\n' +
-      'DIAS: ' + this.diasRutina + '\n' +
-      'EJERCICIOS: ' + this.ejerciciosRutina + '\n' +
-      'REPETICIONES: ' + this.repeticionesRutina + '\n' +
-      'SERIES: ' + this.seriesRutina + '\n' +
-      'DESCANSO: ' + this.descansoRutina + '\n' +
-      'OBSERVACIONES: ' + this.observacionesRutina);
+  MostrarDatosTab2() {
+    this.presentAlert
 
-      //Con estas lineas de codigo se GUARDAN los datos en el LOCAL STORAGE, se guardan cuando se presiona el boton de mostrar datos
-      localStorage.setItem('nombreRutina', this.nombreRutina);
-      localStorage.setItem('tipoRutina', this.tipoRutina);
-      localStorage.setItem('duracionRutina', this.duracionRutina);
-      localStorage.setItem('diasRutina', this.diasRutina);
-      localStorage.setItem('ejerciciosRutina', this.ejerciciosRutina);
-      localStorage.setItem('seriesRutina', this.seriesRutina);
-      localStorage.setItem('repeticionesRutina', this.repeticionesRutina);
-      localStorage.setItem('descansoRutina', this.descansoRutina);
-      localStorage.setItem('observacionesRutina', this.observacionesRutina);
+      ('Su rutina es:\n' +
+        'NOMBRE: ' + this.nombreRutina + '\n' +
+        'TIPO: ' + this.tipoRutina + '\n' +
+        'DURACION: ' + this.duracionRutina + '\n' +
+        'DIAS: ' + this.diasRutina + '\n' +
+        'EJERCICIOS: ' + this.ejerciciosRutina + '\n' +
+        'REPETICIONES: ' + this.repeticionesRutina + '\n' +
+        'SERIES: ' + this.seriesRutina + '\n' +
+        'DESCANSO: ' + this.descansoRutina + '\n' +
+        'OBSERVACIONES: ' + this.observacionesRutina);
+
+    //Con estas lineas de codigo se GUARDAN los datos en el LOCAL STORAGE, se guardan cuando se presiona el boton de mostrar datos
+    localStorage.setItem('nombreRutina', this.nombreRutina);
+    localStorage.setItem('tipoRutina', this.tipoRutina);
+    localStorage.setItem('duracionRutina', this.duracionRutina);
+    localStorage.setItem('diasRutina', this.diasRutina);
+    localStorage.setItem('ejerciciosRutina', this.ejerciciosRutina);
+    localStorage.setItem('seriesRutina', this.seriesRutina);
+    localStorage.setItem('repeticionesRutina', this.repeticionesRutina);
+    localStorage.setItem('descansoRutina', this.descansoRutina);
+    localStorage.setItem('observacionesRutina', this.observacionesRutina);
 
   }
 
@@ -109,12 +110,12 @@ export class Tab2Page implements OnInit {
   LimpiarDatosTab2() {
     this.nombreRutina = '';
     this.tipoRutina = '';
-    this.duracionRutina = 0;
-    this.diasRutina = 0;
+    this.duracionRutina = '';
+    this.diasRutina = '';
     this.ejerciciosRutina = '';
-    this.repeticionesRutina = 0;
-    this.seriesRutina = 0;
-    this.descansoRutina = 0;
+    this.repeticionesRutina = '';
+    this.seriesRutina = '';
+    this.descansoRutina = '';
     this.observacionesRutina = '';
   }
 

@@ -9,12 +9,6 @@ ion-card-title h3{ // Clase creada para el titulo del card del login
     text-align: center;
     
 }
-
-.logo{ // Clase creada para el logo del login
-    max-width: 30%; // Tamaño del logo
-    height: auto; // Altura del logo
-}
-
 /* Estilos viñetas pie de pagina */
 .vinetas{
     color: rgb(250, 245, 245);
@@ -30,4 +24,36 @@ ion-card-title h3{ // Clase creada para el titulo del card del login
     text-align: center; //Centrado
     margin-top: 5%; //Margen superior
     color: rgb(211, 226, 0); //Color del boton
+}
+
+/* Estilos de la imagen de fondo */
+@keyframes fire {
+    0% {
+      filter: hue-rotate(0deg) brightness(1) contrast(1);//Inicia sin rotación de color
+    }
+    25% {
+      filter: hue-rotate(90deg) brightness(1.2) contrast(1.2);//Cambia el color hacia tonos de fuego
+    }
+    50% {
+      filter: hue-rotate(180deg) brightness(1.4) contrast(1.4);//Cambia el color hacia tonos de fuego
+    }
+    75% {
+      filter: hue-rotate(270deg) brightness(1.2) contrast(1.2);//Cambia el color hacia tonos de fuego
+    }
+    100% {
+      filter: hue-rotate(360deg) brightness(1) contrast(1);//Regresa al color original
+    }
+  }
+
+
+.logo-container {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.fire-logo {
+    max-width: 20%;//Tamaño de la imagen
+    height: auto;//Altura de la imagen
+    animation: fire 3s ease-in-out infinite; /* Animación de cambio de color como fuego */
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Camera, CameraResultType,  } from '@capacitor/camera';
+import { Camera, CameraResultType, } from '@capacitor/camera';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
@@ -26,8 +26,9 @@ export class CameraPage implements OnInit {
         resultType: CameraResultType.Uri
       });
 
-       // Use webPath to display the new image instead of base64 since it's already loaded into memory
-       this.photo = this.sanitizer.bypassSecurityTrustResourceUrl(capturedPhoto.webPath!);
+
+      this.photo = this.sanitizer.bypassSecurityTrustResourceUrl(capturedPhoto.webPath!);
+
 
       // Si deseas mostrar la imagen inmediatamente, puedes establecerla en el template
       // <img [src]="image" *ngIf="image">
@@ -36,14 +37,13 @@ export class CameraPage implements OnInit {
     }
   }
 
-  
-  IraHome(){
+  IraHome() {
     this.router.navigate(['/tabs/tab1']);
   }
-  
-  salir(){
+
+  salir() {
     this.router.navigate(['//login']);
   }
-  
+
 
 }

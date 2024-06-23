@@ -45,11 +45,10 @@
 
     <!-- PERMISOS DE CAMARA (en caso de solicitar)-->
     <!-- Permision camera  https://capacitorjs.com/docs/apis/camera-->
-    <!--
-    usses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    usses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    -->
 
-
+    <!--COMENTAR SI ES NECESARIO POR PERMISOS -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+   
 
 </manifest>

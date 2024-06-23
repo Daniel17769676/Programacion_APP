@@ -19,22 +19,22 @@
         <h3>¡Bienvenido!</h3>
       </ion-card-title>
 
-
       <!--Logo de la app-->
       <ion-grid>
         <ion-row>
           <ion-col size="12" class="ion-text-center">
-            <img class="logo" src="assets/Logo3.webp" />
+            <div class="logo-container">
+            <img class="fire-logo" src="assets/Logo3.webp" alt="Logo de la app" />
+            </div>
           </ion-col>
         </ion-row>
       </ion-grid>
-
 
       <!--Datos para el login-->
       <ion-card-content>
         <ion-item>
           <ion-label position="floating">Usuario</ion-label>
-          <ion-input type="text" maxlength="8" mminlength="3" [(ngModel)]="usuario"></ion-input>
+          <ion-input type="text" [(ngModel)]="usuario"></ion-input>
         </ion-item>
 
         <ion-item>

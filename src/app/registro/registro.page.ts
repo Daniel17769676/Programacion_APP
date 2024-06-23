@@ -93,28 +93,21 @@ export class registroPage implements OnInit {
 
   //Funcion para mostrar los datos
   MostrarDatos() {
-    this.presentAlert
-    ('Su datos son:\n' +
-      'USUARIO: ' + this.usuario + '\n' +
-      'PASSWORD: ' + this.password + '\n' +
-      'NOMBRE: ' + this.nombre + '\n' +
-      'EDAD: ' + this.edad + '\n' +
-      'PESO: ' + this.peso + '\n' +
-      'ESTATURA: ' + this.estatura + '\n' +
-      'SEXO: ' + this.sexo + '\n'
-    );
 
-    /*
-    //Con estas lineas de codigo se guardan los datos en el LOCAL STORAGE
-    localStorage.setItem('usuario', this.usuario);
-    localStorage.setItem('password', this.password);        
-    localStorage.setItem('nombre', this.nombre);        
-    localStorage.setItem('edad', this.edad);
-    localStorage.setItem('peso', this.peso);
-    localStorage.setItem('estatura', this.estatura);
-    localStorage.setItem('sexo', this.sexo);
-  //localStorage.setItem('usuario', this.usuarioRecibido);
-  */
+    if (this.usuario.trim() === '' || this.password.trim() === '' || this.nombre.trim() === '' || this.edad.trim() === '' || this.peso.trim() === '' || this.estatura.trim() === '' || this.sexo.trim() === '') {
+      this.presentAlert('Campos vacios: complete datos para mostrar');
+    } else {
+      this.presentAlert
+        ('Su datos son:\n' +
+          'USUARIO: ' + this.usuario + '\n' +
+          'PASSWORD: ' + this.password + '\n' +
+          'NOMBRE: ' + this.nombre + '\n' +
+          'EDAD: ' + this.edad + '\n' +
+          'PESO: ' + this.peso + '\n' +
+          'ESTATURA: ' + this.estatura + '\n' +
+          'SEXO: ' + this.sexo + '\n'
+        );
+    }
   }
 
 
@@ -182,7 +175,7 @@ export class registroPage implements OnInit {
   guardarDatos() {
     this.dbservice.insertUsuario(this.usuario, this.password, this.nombre, this.peso, this.estatura, this.sexo, this.edad)
       .then(() => {
-      //this.presentAlert('Datos guardados exitosamente');
+        //this.presentAlert('Datos guardados exitosamente');
       })
       .catch(error => {
         this.presentAlert('Error al guardar datos:' + error);

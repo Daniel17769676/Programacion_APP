@@ -28,17 +28,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-button expand="block" (click)="takePicture()">¡Sacate una foto!</ion-button>
+  <div id="container" class="cuerpo_page">
 
-  <ion-card *ngIf="photo">
-    <ion-card-header>
-      Captured Photo
-    </ion-card-header>
-    <ion-card-content>
-      <img [src]="photo" *ngIf="photo" width="100%">
-    </ion-card-content>
-  </ion-card>
+    <ion-button expand="block" (click)="takePicture()">¡Sacate una foto!</ion-button>
 
-  
+    <ion-card *ngIf="photo">
+      <ion-card-header>
+        Captured Photo
+      </ion-card-header>
+      <ion-card-content>
+        <img [src]="photo" *ngIf="photo" width="100%">
+      </ion-card-content>
+    </ion-card>
 
+
+  </div>
 </ion-content>
