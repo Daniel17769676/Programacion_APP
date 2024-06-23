@@ -59,7 +59,7 @@ export class Tab3Page implements OnInit {
         localStorage.setItem('descansoRutinaPersistente', this.recibe_tab2_descansoRutina);
         localStorage.setItem('observacionesRutinaPersistente', this.recibe_tab2_observacionesRutina);
 
-        console.log("Datos enviados CORRECTAMENTE a tab3");
+        console.log();
       }
     }
     )

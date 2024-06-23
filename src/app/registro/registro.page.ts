@@ -12,8 +12,6 @@ import { DbserviceService } from '../services/servicio-db.service';
 
 export class registroPage implements OnInit {
 
-  //usuarioRecibido: any = "";
-  //passwordRecibido: string = "";
   usuario: any = "";
   password: any = "";
   nombre: any = "";
@@ -33,30 +31,7 @@ export class registroPage implements OnInit {
   constructor(private router: Router,
     private activateroute: ActivatedRoute,
     private alertController: AlertController,
-    private dbservice: DbserviceService) {
-
-    /*
-    this.activateroute.queryParams.subscribe(params => {
-      if (this.router.getCurrentNavigation()?.extras?.state) {
-        this.usuarioRecibido = this.router.getCurrentNavigation()?.extras?.state?.['usuarioEnviado'];
-        this.passwordRecibido = this.router.getCurrentNavigation()?.extras?.state?.['passwordEnviado'];
-
-
-        //Con estas lineas de codigo se RECIBE el dato de usuario del LOGIN y se guarda en el LOCAL STORAGE
-        localStorage.setItem('usuarioRebidoPersistente', this.usuarioRecibido);//Paso 02: Se guarda el dato en el LOCAL STORAGE
-
-
-
-
-        console.log();
-
-    
-
-      }
-    })
-      */
-
-  }
+    private dbservice: DbserviceService) { }
 
   ngOnInit() { //El ngOnInit es un metodo que se ejecuta cuando se inicia la pagina
 
@@ -93,22 +68,25 @@ export class registroPage implements OnInit {
 
   //Funcion para mostrar los datos
   MostrarDatos() {
-
     if (this.usuario.trim() === '' || this.password.trim() === '' || this.nombre.trim() === '' || this.edad.trim() === '' || this.peso.trim() === '' || this.estatura.trim() === '' || this.sexo.trim() === '') {
-      this.presentAlert('Campos vacios: complete datos para mostrar');
+    this.presentAlert('Campos vacíos');
+    console.log('Campos vacíos');
     } else {
-      this.presentAlert
-        ('Su datos son:\n' +
-          'USUARIO: ' + this.usuario + '\n' +
-          'PASSWORD: ' + this.password + '\n' +
-          'NOMBRE: ' + this.nombre + '\n' +
-          'EDAD: ' + this.edad + '\n' +
-          'PESO: ' + this.peso + '\n' +
-          'ESTATURA: ' + this.estatura + '\n' +
-          'SEXO: ' + this.sexo + '\n'
-        );
-    }
+      console.log('Datos mostrados');
+      this.presentAlert(
+        'Sus datos son:\n' +
+        'USUARIO: ' + this.usuario + '\n' +
+        'PASSWORD: ' + this.password + '\n' +
+        'NOMBRE: ' + this.nombre + '\n' +
+        'EDAD: ' + this.edad + '\n' +
+        'PESO: ' + this.peso + '\n' +
+        'ESTATURA: ' + this.estatura + '\n' +
+        'SEXO: ' + this.sexo + '\n'
+      );  
+      console.log('Datos mostrados');  
+    }    
   }
+
 
 
   //Funcion para limpiar los datos
@@ -125,34 +103,10 @@ export class registroPage implements OnInit {
   //Funcion para ir al login o cerrar sesion
   salir() {
     localStorage.clear();//Se limpian los datos del LOCAL STORAGE al cerrar sesion
+    console.log('Se limpia el local storage');
     this.router.navigate(['/login']);
-    console.log('Sesion cerrada');
-
+    console.log('Navega a login');
   }
-
-  /* 
-   //Funcion para ir a las paginas Tab1, Tab2, Tab3
-   IrTabs() {
-     this.router.navigate(['/tabs']);
-   }
-   */
-
-
-  /*
-  //Definimos la funcion para enviar los datos a la pagina tab1
-  enviarDatosTabs1() {
-    let navigationExtras: NavigationExtras = {
-      state: {
-        envia_usu_home_nombre: this.nombre,        
-        envia_usu_home_peso: this.peso,
-        envia_usu_home_estatura: this.estatura,
-        envia_usu_home_sexo: this.sexo,
-        envia_usu_home_edad: this.edad
-      }
-    }
-    this.router.navigate(['/tabs/tab1'], navigationExtras);//Con esta linea de codigo se envian los datos a la pagina tab1
-  }
-  */
 
   //FUNCION PARA IR A TAB1-HOME Y ENVIAR LOS DATOS
   home() {

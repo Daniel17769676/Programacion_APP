@@ -27,7 +27,7 @@ export class Tab2Page implements OnInit {
 
   ngOnInit() {
 
-    //Con estas lineas de codigo se obtienen los datos del LOCAL STORAGE
+    //Con estas lineas de codigo se obtienen los datos del LOCAL STORAGE, PASO 02
     this.nombreRutina = localStorage.getItem('nombreRutina');
     this.tipoRutina = localStorage.getItem('tipoRutina');
     this.duracionRutina = localStorage.getItem('duracionRutina');
@@ -38,7 +38,7 @@ export class Tab2Page implements OnInit {
     this.descansoRutina = localStorage.getItem('descansoRutina');
     this.observacionesRutina = localStorage.getItem('observacionesRutina');
 
-
+    console.log('Datos recuperados del LOCAL STORAGE');
 
   }
 
@@ -46,7 +46,9 @@ export class Tab2Page implements OnInit {
   //Funcion para boton crear rutina
   anadirRutina() {
     this.router.navigate(['/tabs/tab3']);
+    console.log('Navega a tab3');
     this.enviarDatosTabs3();
+    console.log('Envia datos a tab3');
   }
 
 
@@ -79,9 +81,12 @@ export class Tab2Page implements OnInit {
 
   //Funcion para mostrar los datos
   MostrarDatosTab2() {
-    this.presentAlert
-
-      ('Su rutina es:\n' +
+    if (this.nombreRutina.trim() === '' || this.tipoRutina.trim() === '' || this.duracionRutina.trim() === '' || this.diasRutina.trim() === '' || this.ejerciciosRutina.trim() === '' || this.repeticionesRutina.trim() === '' || this.seriesRutina.trim() === '' || this.descansoRutina.trim() === '' || this.observacionesRutina.trim() === '') {
+      this.presentAlert('Campos vacíos');
+      console.log('Campos vacíos');
+    } else {
+      this.presentAlert(
+        'Su rutina es:\n' +
         'NOMBRE: ' + this.nombreRutina + '\n' +
         'TIPO: ' + this.tipoRutina + '\n' +
         'DURACION: ' + this.duracionRutina + '\n' +
@@ -91,8 +96,9 @@ export class Tab2Page implements OnInit {
         'SERIES: ' + this.seriesRutina + '\n' +
         'DESCANSO: ' + this.descansoRutina + '\n' +
         'OBSERVACIONES: ' + this.observacionesRutina);
+        console.log('Datos mostrados');
 
-    //Con estas lineas de codigo se GUARDAN los datos en el LOCAL STORAGE, se guardan cuando se presiona el boton de mostrar datos
+    //Con estas lineas de codigo se GUARDAN los datos en el LOCAL STORAGE, se guardan cuando se presiona el boton de mostrar datos, PASO 01
     localStorage.setItem('nombreRutina', this.nombreRutina);
     localStorage.setItem('tipoRutina', this.tipoRutina);
     localStorage.setItem('duracionRutina', this.duracionRutina);
@@ -102,6 +108,9 @@ export class Tab2Page implements OnInit {
     localStorage.setItem('repeticionesRutina', this.repeticionesRutina);
     localStorage.setItem('descansoRutina', this.descansoRutina);
     localStorage.setItem('observacionesRutina', this.observacionesRutina);
+
+    console.log('Guardado en el LOCAL STORAGE');
+      }
 
   }
 
@@ -117,6 +126,9 @@ export class Tab2Page implements OnInit {
     this.seriesRutina = '';
     this.descansoRutina = '';
     this.observacionesRutina = '';
+    console.log('Datos en blanco');
+    //localStorage.clear();//Se limpia el local storage de la pagina tab2
+    //console.log('Local storage limpio');
   }
 
 

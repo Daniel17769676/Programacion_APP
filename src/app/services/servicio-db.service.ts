@@ -56,7 +56,7 @@ export class DbserviceService {
         .then((res) => {
           if (res.rows.length > 0) {
 
-            const user = res.rows.item(0);//Se usa para obtener el primer registro de la consulta de la base de datos
+            const user = res.rows.item(0);//Se usa para obtener el primer registro de la consulta del LOCAL STORAGE
             localStorage.setItem('usuario', user.usuario);// se usa para guardar el id del usuario en el local storage que se obtiene de la base de datos
             localStorage.setItem('nombre', user.nombre);// se usa para guardar el nombre del usuario en el local storage que se obtiene de la base de datos
             localStorage.setItem('peso', user.peso);// se usa para guardar el peso del usuario en el local storage que se obtiene de la base de datos
