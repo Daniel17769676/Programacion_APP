@@ -67,17 +67,17 @@ export class Tab3Page implements OnInit {
 
   ngOnInit() {
 
-  //Cuando carga la pagina se obtienen los datos del LOCAL STORAGE
-  this.nombreRutinaPersistente = localStorage.getItem('nombreRutinaPersistente');
-  this.tipoRutinaPersistente = localStorage.getItem('tipoRutinaPersistente');
-  this.duracionRutinaPersistente = localStorage.getItem('duracionRutinaPersistente');
-  this.diasRutinaPersistente = localStorage.getItem('diasRutinaPersistente');
-  this.ejerciciosRutinaPersistente = localStorage.getItem('ejerciciosRutinaPersistente');
-  this.repeticionesRutinaPersistente = localStorage.getItem('repeticionesRutinaPersistente');
-  this.seriesRutinaPersistente = localStorage.getItem('seriesRutinaPersistente');
-  this.descansoRutinaPersistente = localStorage.getItem('descansoRutinaPersistente');
-  this.observacionesRutinaPersistente = localStorage.getItem('observacionesRutinaPersistente');
-     
+     //Cuando carga la pagina se obtienen los datos del LOCAL STORAGE
+    this.nombreRutinaPersistente = localStorage.getItem('nombreRutinaPersistente');
+    this.tipoRutinaPersistente = localStorage.getItem('tipoRutinaPersistente');
+    this.duracionRutinaPersistente = localStorage.getItem('duracionRutinaPersistente');
+    this.diasRutinaPersistente = localStorage.getItem('diasRutinaPersistente');
+    this.ejerciciosRutinaPersistente = localStorage.getItem('ejerciciosRutinaPersistente');
+    this.repeticionesRutinaPersistente = localStorage.getItem('repeticionesRutinaPersistente');
+    this.seriesRutinaPersistente = localStorage.getItem('seriesRutinaPersistente');
+    this.descansoRutinaPersistente = localStorage.getItem('descansoRutinaPersistente');
+    this.observacionesRutinaPersistente = localStorage.getItem('observacionesRutinaPersistente');
+
 
   }
 
